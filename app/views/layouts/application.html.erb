@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>ZeroOne</title>
+	  <%= stylesheet_link_tag    "application", media: "all"%>
+	  <%= javascript_include_tag "application"%>
+	  <%= csrf_meta_tags %>
+	</head>
+
+	<body>
+		<div id="page">
+			
+			<%= render("partial_templates/header.html.erb") %>
+			<%= render("partial_templates/main_menu.html.erb") %>
+			<div id="content" class="content"> <%= yield %> </div>
+			<%= render("partial_templates/footer.html.erb") %>
+			
+		</div>
+		
+		
+	</body>
+
+</html>

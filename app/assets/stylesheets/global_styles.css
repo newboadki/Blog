@@ -1,0 +1,269 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Generic */
+.with-margins
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+
+/* Grid Styles */
+.page
+{
+	width: 100%;
+	height: 100%;
+}
+
+.grid-unit {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  padding: 0 1.5em;
+  width: 100%;
+}
+
+
+.row:after {  
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;  
+}
+
+.row-top-padding {
+	padding-top: 50px;
+}
+
+.row-bottom-margin {
+	padding-bottom: 50px;
+}
+
+.full-column {
+	width: 100%;
+}
+
+.centered-column {
+	width: 25%;
+	margin-left: 37.5%;
+	margin-right: 37.5%;	
+}
+
+.main-column {
+	width: 65%;
+}
+
+.side-column {
+	width: 35%;
+}
+
+.matrix-column {
+	width: 20%;
+}
+
+
+
+.apps-matrix-column {
+	width: 25%;
+	text-align: center;
+}
+
+
+.app-icon {
+	width: 50%;
+}
+
+.main .main-column,
+.main .side-column {
+  background: #eec;
+}
+
+.half-column
+{
+	width: 50%;
+}
+
+.white-rounded-frame {
+}
+
+#logo
+{
+	display: inline;
+	width: 0.65em;	
+	margin-right: 0.3em;	
+	vertical-align: baseline;
+}
+
+
+.header
+{
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	background-color: #fff;
+}
+
+
+.content
+{
+	/*background-color: #d4ae7d; /*#734A26*/
+	background: #aaa url('noise.png');
+	color: #111111;
+	margin-left:auto;
+	margin-right:auto;	
+	font-family:sans-serif;
+}
+
+
+.footer
+{
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	height: 100px;
+	background-color: #000000;
+	color: #444;
+	background: #111 url('footer_noise.png');
+}
+
+.footer-section {
+	text-align: center;	
+	margin-top: 20px;
+}
+
+
+h1.title
+{	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-top: 20px;
+	font-size: 2.5em;
+	color: #222222;
+	width:70%;
+	text-align: center;
+}
+
+
+p.subtitle
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-top: 0;
+	width:70%;
+
+	padding-bottom: 25px;
+	font-size: 1.5em;	
+	color: #777777;
+	font-style: oblique;
+	text-align: center;
+}
+
+
+/* Application Menu*/
+.horizontal_menu
+{
+	list-style-type: none;
+	padding: 0;	
+	text-align: center;
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 0;
+	background: #111 url('main_menu_texture.png');
+	height: 45px;
+}
+
+.horizontal_menu ol 
+{
+	margin-top: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+.horizontal_menu ol li 
+{
+ 	display: inline;
+}
+
+
+.horizontal_menu ol li a
+{
+	text-decoration: none;
+	padding: .2em 1em;
+	color: #BBBBBB;
+}
+
+
+.horizontal_menu a:hover
+{
+	color: #FFFFFF;
+}
+
+
+.centered-element {
+	margin-left: 100px;
+	margin-right: auto;
+}
+
+/* Blog Posts*/
+.post-image {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px #222;
+}
+
+
+.post-title {
+	font-size: 1.5em;
+	padding-top: 0;
+}
+
+.post-body {
+	font-size: 1.1em;
+	padding-top:20px;
+	text-align: justify;
+}
+
+.post-date {
+	color: #444;
+	font-size: 0.8em;
+}
+
+.post-list  {
+	 list-style-type: none;
+}
+
+.post-top-padding {
+	padding-top: 50px;
+}
+
+
+/* HOME */
+.about-us {
+	text-align: center;
+}
