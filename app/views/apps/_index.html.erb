@@ -1,54 +1,29 @@
 <ul class="row post-list">
-	<li class="row with-margins post-top-padding">
-		
-		<div class="grid-unit apps-matrix-column ">
-			<%= image_tag("apps-icons/ig.png", {:class => "app-icon"}) %>
-			<p>IG</p>
-		</div>
 
-		<div class="grid-unit apps-matrix-column">
-			<%= image_tag("apps-icons/sedition.png", {:class => "app-icon"}) %>
-			<p>Sedition Art</p>
-		</div>
+	<% 	row_index = 0
+		@rows.each do |row| %>
+		<li class="row with-margins post-top-padding">
+			<% row.each do |app| %>
+				<div class="grid-unit apps-matrix-column ">
+					<%= link_to(app_path(app), :class=>"app-link row-#{row_index}") do %>
+						<%= image_tag(app.image_src, {:class => "app-icon"}) %>
+					<% end %>					
+					<p><%= app.name %></p>
+				</div>
+			<% end %>
+		</li>
+		<li class="row post-top-padding app-description-row-hidden expansion-row row-<%= row_index %>">
+			<div class="arrow-up row-<%= row_index %>"></div>
+			<div class="grid-unit centered-column app-description-placeholder"></div>
+		</li>
 
-
-		<div class="grid-unit apps-matrix-column">
-			<%= image_tag("apps-icons/planning-poker.png", {:class => "app-icon"}) %>
-			<p>Planning Poker</p>
-		</div>
-
-
-		<div class="grid-unit apps-matrix-column">
-			<%= image_tag("apps-icons/gareth-cliff.png", {:class => "app-icon"}) %>
-			<p>Gareth Cliff</p>
-		</div>
-
-	</li>
+	<% 	row_index += 1
+		end %>
+</ul>
 
 
-	<li class="row with-margins post-top-padding">
-		
-		<div class="grid-unit apps-matrix-column ">
-			<%= image_tag("apps-icons/ig.png", {:class => "app-icon"}) %>
-			<p>IG</p>
-		</div>
-
-		<div class="grid-unit apps-matrix-column">
-			<%= image_tag("apps-icons/flat-white.png", {:class => "app-icon"}) %>
-			<p>Flat White</p>
-		</div>
-
-
-		<div class="grid-unit apps-matrix-column">
-			<%= image_tag("apps-icons/planning-poker.png", {:class => "app-icon"}) %>
-			<p>Planning Poker</p>
-		</div>
-
-
-		<div class="grid-unit apps-matrix-column">
-			<%= image_tag("apps-icons/gareth-cliff.png", {:class => "app-icon"}) %>
-			<p>Gareth Cliff</p>
-		</div>
-
-	</li>
-</ul>	
+<ul class="app-descriptions-archive">
+	<% @apps.each do |app| %>
+		<li id="<%= transform_image_name_to_id(app.image_src)%>"><%= app.description %></li>
+	<% end %>
+</ul>

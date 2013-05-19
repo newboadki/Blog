@@ -28,6 +28,17 @@ time, mark, audio, video {
 	width: 70%;
 }
 
+.loading-hud {
+		
+	left:50%;
+	top:150px;	
+	margin-right: auto;
+	width: 30px;	
+	height: 30px;	
+	text-align: center;
+	display: none;
+	position: absolute;
+}
 
 /* Grid Styles */
 .page
@@ -41,7 +52,7 @@ time, mark, audio, video {
   display: block;
   float: left;
   padding: 0 1.5em;
-  width: 100%;
+  width: 100%;  
 }
 
 
@@ -50,7 +61,7 @@ time, mark, audio, video {
   display: block;
   height: 0;
   clear: both;
-  visibility: hidden;  
+  visibility: hidden;    
 }
 
 .row-top-padding {
@@ -71,6 +82,12 @@ time, mark, audio, video {
 	margin-right: 37.5%;	
 }
 
+.aboutme-centered-column {
+	width: 55%;
+	margin-left: 22.5%;
+	margin-right: 22.5%;		
+}
+
 .main-column {
 	width: 65%;
 }
@@ -81,6 +98,10 @@ time, mark, audio, video {
 
 .matrix-column {
 	width: 20%;
+}
+
+.matrix-skills-column {
+	width: 33%;
 }
 
 
@@ -126,26 +147,38 @@ time, mark, audio, video {
 }
 
 
-.content
-{
-	/*background-color: #d4ae7d; /*#734A26*/
-	background: #aaa url('noise.png');
+#content-area {
 	color: #111111;
 	margin-left:auto;
 	margin-right:auto;	
 	font-family:sans-serif;
+	position: relative;
+	padding-bottom: 45px;
 }
+
+
+.content-area-not-loading
+{
+	/*background-color: #d4ae7d; /*#734A26*/
+	background: #eee url('noise.png');
+}
+
+.content-area-loading
+{
+	background: #eee url('noise.png');
+}
+
 
 
 .footer
 {
 	margin-left:auto;
-	margin-right:auto;
+	margin-right:auto;	
 	width: 100%;
 	height: 100px;
 	background-color: #000000;
 	color: #444;
-	background: #111 url('footer_noise.png');
+	background: #38475A url('noisier.png');
 }
 
 .footer-section {
@@ -193,15 +226,17 @@ p.subtitle
 	margin-left:auto;
 	margin-right:auto;
 	margin-top: 0;
-	background: #111 url('main_menu_texture.png');
+	background: #38475A url('noisier.png');/*   283B4A*/
 	height: 45px;
+	font-family:sans-serif;	
+	font-weight: thick;
 }
 
 .horizontal_menu ol 
 {
 	margin-top: 0;
 	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-bottom: 15px;	
 }
 
 
@@ -221,7 +256,7 @@ p.subtitle
 
 .horizontal_menu a:hover
 {
-	color: #FFFFFF;
+	color: #EEE;
 }
 
 
@@ -240,18 +275,22 @@ p.subtitle
 
 .post-title {
 	font-size: 1.5em;
+	font-weight: bold;
 	padding-top: 0;
+	color: #04044A;
 }
 
 .post-body {
 	font-size: 1.1em;
 	padding-top:20px;
 	text-align: justify;
+	line-height: 1.75em;
 }
 
 .post-date {
 	color: #444;
 	font-size: 0.8em;
+	padding-top: 5px;
 }
 
 .post-list  {
@@ -266,4 +305,84 @@ p.subtitle
 /* HOME */
 .about-us {
 	text-align: center;
+}
+
+.app-description-row-hidden {
+	display: none;	
+	height: 0px;
+	margin-top: 20px;
+}
+
+.app-description-row-visible {
+	display: block;
+	background-color: #bbb;	
+	margin-top: 20px;
+}
+
+
+.app-link {
+	text-decoration: none;
+} 
+
+
+.arrow-up
+ {
+
+ 	position: relative;
+ 	top: -60px;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	
+	border-bottom: 10px solid #bbb;
+}
+
+.app-description-place-holder {
+	
+}
+
+.app-descriptions-archive {
+	display: none;
+}
+
+
+.app-show-title {		
+	font-size: 2em;
+	padding-top: 20px;
+}
+
+.app-show-description {
+	margin-top: 55px;
+}
+
+
+.app-show-icon-image {	
+	width: 90px;
+	height: 90px;
+	margin-right: 30px;	
+	float: left;
+}
+
+.app-show-unit {
+	margin-top: 50px;
+}
+
+
+
+.skill-title {		
+	font-size: 2em;
+	padding-top: 5px;
+}
+
+.skill-description {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.skill-icon-image {
+	width: 75px;
+	height: 75px;
+	margin-right: 30px;	
+	float: left;
 }

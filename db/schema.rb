@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130424215841) do
+ActiveRecord::Schema.define(version: 20130518154209) do
 
   create_table "applications", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_src"
   end
 
   create_table "applications_users", force: true do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20130424215841) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_src"
   end
 
   add_index "blog_posts", ["user_id"], name: "index_blog_posts_on_user_id"

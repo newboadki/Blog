@@ -6,11 +6,11 @@
 		<% if (type == "left-image") %>
 			<li class="row with-margins post-top-padding">
 				<div class="grid-unit side-column white-rounded-frame">
-					<%= image_tag("beautiful_vineyards.png", {:class => "post-image"}) %>
+					<%= image_tag(post.image_src, {:class => "post-image"}) %>
 				</div>
 				<div class="grid-unit main-column">
 					<h3 class="post-title"><%= post.title %></h3>
-					<p class="post-date"><%= post.created_at%></h3>
+					<p class="post-date"><%= post.created_at%> by <%= post.user.name %></h3>
 					<p class="post-body"><%= raw(post.body) %></p>
 				</div>
 			</li>
@@ -20,12 +20,12 @@
 			<li class="row with-margins post-top-padding">
 				<div class="grid-unit main-column">
 					<h3 class="post-title"><%= post.title %></h3>
-					<p class="post-date"><%= post.created_at%></h3>
+					<p class="post-date"><%= post.created_at%> by <%= post.user.name %></h3>
 					<p class="post-body"><%= raw(post.body) %></p>
 			   </div>
 
 				<div class="grid-unit side-column white-rounded-frame">
-					<%= image_tag("beautiful_vineyards.png", {:class => "post-image"}) %>
+					<%= image_tag(post.image_src, {:class => "post-image"}) %>
 				</div>
 			</li>
 
