@@ -1,25 +1,26 @@
-<div class="footer row">
+<div class="footer">
+	<div class="row with-margins row-top-margin row-bottom-margin">
+		
+			<div class="grid-unit matrix-footer-big-column">		
+				<h3 class="footer-section-title">About me</h3>
+				<div>
+					<%= image_tag("portrait.jpg", {:class => "portrait"}) %>
+					<p class="about-me">Hi, I am Borja, a Software engineer doing iOS development at the moment. I live in London, UK</p>	
+				</div>	
+		   </div>
 
-	<div class="grid-unit matrix-column footer-section">
-		<p> </p>
-	</div>
 
-	<div class="grid-unit matrix-column footer-section">
-		<p>Email</p>
-		<p>borja.arias@gmail.com</p>
-	</div>
+			<div class="grid-unit matrix-footer-big-column">
+				<h3 class="footer-section-title">Contact information</h3>
+				<p>I can best be reached via email at borja dot arias at gmail dot com. I also have a LinkedIn account and a Skype one.</p>
+		   </div>
+
+
+			<div class="grid-unit matrix-footer-small-column">
+				<%= image_tag("spain.gif", {:class => "centered-element"}) %>
+				<p class="about-spain">Crafted in Spain</p>
+		   </div>
+		</div>
 	
-	<div id="spain_image" class="grid-unit matrix-column">
-		<%= image_tag("spain.gif", {:class => "centered-element"}) %>		
-	</div>
-
-	<div class="grid-unit matrix-column footer-section">
-		<p>Phone</p>
-		<p>1.492.963.2</p>
-	</div>
-
-	<div class="grid-unit matrix-column footer-section">
-		<p> </p>
-	</div>
-
 </div>
+

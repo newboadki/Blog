@@ -3,6 +3,7 @@ class AppsController < ApplicationController
   @@APPS_PER_ROW = 4
 
   def index
+  	sleep(1)
   	# Create the rows
     @apps = Application.all    
     number_of_rows = (@apps.count.to_f / @@APPS_PER_ROW.to_f).ceil()

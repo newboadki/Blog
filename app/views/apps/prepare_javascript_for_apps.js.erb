@@ -36,7 +36,7 @@ function descriptionForApp(app) {
 	var imageId = match[1];
 
 	// Then we need to find the element inside the description archive with that string as the id	
-	return $("#" + imageId).text();
+	return $("#" + imageId).html();
 }
 
 function moveArrow(row) {
@@ -45,7 +45,7 @@ function moveArrow(row) {
 	var appDescription = descriptionForApp(selectedApp);
 	var appDescriptionPlaceHolder = $(".app-description-placeholder");
 	arrow.animate( {left:arrowXOffsetOfSelectedAppLink(row)}, 400, function() {
-		appDescriptionPlaceHolder.text(appDescription);
+		appDescriptionPlaceHolder.html(appDescription);
 	});
 
 }
