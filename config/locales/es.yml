@@ -1,0 +1,28 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+es:
+  page_sections:
+    home_section:
+      title: "Acerca de esta página"
+      about_this_page: "Soy un ingeniero informático y vivo en Londres. Jugador de Baloncesto. Corredor ocasional. Ávido lector. Nómada de los tiempos modernos, habiendo vivido en Noruega, Londres y Ciudad del Cabo, SA. Creyente en la idea de que posible construir mejores aplicaciones informáticas. </br>Actualmente trabajo escribiendo software para las plataformas iOS, pero el núcleo de lo que me apasiona acerca de la informática es independiente de la plataforma. Me encanta resolver problemas de escalabilidad y reusabilidad, abstraer lo concreto, simplificar lo enredado."
+    blog:
+      title: "Artículos"
