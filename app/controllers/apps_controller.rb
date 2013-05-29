@@ -5,7 +5,7 @@ class AppsController < ApplicationController
   def index
   	sleep(1)
   	# Create the rows
-    @apps = Application.all    
+    @apps = Application.all.ordered_by_created_at('DESC')
     number_of_rows = (@apps.count.to_f / @@APPS_PER_ROW.to_f).ceil()
     @rows = []    
     i = 0

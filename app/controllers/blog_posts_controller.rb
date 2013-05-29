@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
   def index
-  	@posts = BlogPost.all
+  	@posts = BlogPost.ordered_by_created_at('DESC');
   	   
   	   sleep(1)
 	respond_to do |format|
