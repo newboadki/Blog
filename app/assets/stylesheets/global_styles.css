@@ -344,14 +344,16 @@ p.subtitle
 
 .app-description-row-hidden {
 	display: none;	
-	height: 0px;
+	height: 0px;	
 	margin-top: 20px;
+	padding-bottom: 20px;
 }
 
 .app-description-row-visible {
 	display: block;
 	background-color: #bbb;	
 	margin-top: 20px;
+	padding-bottom: 20px;
 }
 
 
@@ -374,6 +376,7 @@ p.subtitle
 
 .app-description-placeholder {
 	height: 100%;
+	padding-bottom: 20px;
 }
 
 .app-descriptions-archive {
@@ -426,8 +429,7 @@ p.subtitle
 }
 
 .skill-icon-image {
-	width: 50px;
-	height: 50px;
+	width: 10%;	
 	margin-right: 20px;	
 	float: left;
 }
