@@ -11,4 +11,12 @@ class StaticContentController < ApplicationController
 	def curriculum
 	end
 
+
+# Main Menu
+# <li>
+# 	<%= link_to(home_path({:locale => 'es'}) ) do %>
+# 		<%= image_tag("spain-flag.jpg", {:class => "locale-flag"}) %>
+# 	<% end %>					
+# </li>		
+
 end
