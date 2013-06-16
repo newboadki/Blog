@@ -30,13 +30,10 @@ function arrowXOffsetOfSelectedAppLink(row) {
 function descriptionForApp(app) {
 	// Given an app we need to construct a dash-separated string with the name of the image
 	var imageElement = app.find('img');
-	var imageName = imageElement.attr('src');
-	alert(imageName);
-	var regex = /\/([^\/]*)\.png|jpeg|jpg|gif/;
+	var imageName = imageElement.attr('src');	
+	var regex = /\/([^\/]*)-.+\.png|jpeg|jpg|gif/;
 	var match = regex.exec(imageName);
-	var imageId = match[1];
-
-	alert($("#" + imageId).html());
+	var imageId = match[1];	
 
 	// Then we need to find the element inside the description archive with that string as the id	
 	return $("#" + imageId).html();
