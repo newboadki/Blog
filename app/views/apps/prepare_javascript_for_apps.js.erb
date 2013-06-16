@@ -35,6 +35,8 @@ function descriptionForApp(app) {
 	var match = regex.exec(imageName);
 	var imageId = match[1];
 
+	alert($("#" + imageId).html());
+
 	// Then we need to find the element inside the description archive with that string as the id	
 	return $("#" + imageId).html();
 }
