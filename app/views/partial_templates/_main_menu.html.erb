@@ -4,11 +4,5 @@
 		<li><%= link_to('Home', home_path, {:class => 'main-menu-link'}) %></li>		
 		<li><%= link_to('Apps', apps_path, {:class => 'main-menu-link'}) %></li>
 		<li><%= link_to('Blog', blog_posts_path, {:class => 'main-menu-link'}) %></li>
-
-		<li>
-			<%= link_to(home_path({:locale => 'en'}) ) do %>
-				<%= image_tag("uk-flag.jpg", {:class => "locale-flag"}) %>
-			<% end %>					
-		</li>			
 	</ol>
 </div>

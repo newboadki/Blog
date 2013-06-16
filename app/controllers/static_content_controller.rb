@@ -13,6 +13,13 @@ class StaticContentController < ApplicationController
 
 
 # Main Menu
+
+# <li>
+# 	<%= link_to(home_path({:locale => 'en'}) ) do %>
+# 		<%= image_tag("uk-flag.jpg", {:class => "locale-flag"}) %>
+# 	<% end %>					
+# </li>			
+
 # <li>
 # 	<%= link_to(home_path({:locale => 'es'}) ) do %>
 # 		<%= image_tag("spain-flag.jpg", {:class => "locale-flag"}) %>
