@@ -31,7 +31,7 @@ function descriptionForApp(app) {
 	// Given an app we need to construct a dash-separated string with the name of the image
 	var imageElement = app.find('img');
 	var imageName = imageElement.attr('src');	
-	var regex = /\/([^\/]*)-.+\.png|jpeg|jpg|gif/;
+	var regex = /\/([^\/]*)(-.+)?\.png|jpeg|jpg|gif/;
 	var match = regex.exec(imageName);
 	var imageId = match[1];	
 
@@ -39,7 +39,7 @@ function descriptionForApp(app) {
 	return $("#" + imageId).html();
 }
 
-function moveArrow(row) {
+function moveArrow(row) {	
 	var arrow = $(".arrow-up");
 	var selectedApp = $(".app-link-highlighted");
 	var appDescription = descriptionForApp(selectedApp);
