@@ -33,12 +33,12 @@ function descriptionForApp(app) {
 	var imageElement = app.find('img');
 	var imageName = imageElement.attr('src');	
 	alert(imageName);
-	var components = imageName.split("/");
-	var lastComponent = components[components.length - 1];
-	var regex = /(.+)\.png|jpeg|jpg|gif/;
-	var match = regex.exec(lastComponent);
-	var imageId = match[1];	
-	alert(imageId);
+	var components_separated_by_slash = imageName.split("/");
+	var lastComponent_separated_by_slash = components_separated_by_slash[components_separated_by_slash.length - 1];
+	var components_separated_by_dash = imageName.split("-");
+	var firstComponent_separated_by_dash = components_separated_by_dash[0];	
+	var imageId = firstComponent_separated_by_dash;	
+	alert(firstComponent_separated_by_dash);
 	// Then we need to find the element inside the description archive with that string as the id	
 	return $("#" + imageId).html();
 }
