@@ -46,6 +46,7 @@ function moveArrow(row) {
 	var arrow = $(".arrow-up");
 	var selectedApp = $(".app-link-highlighted");
 	var appDescription = descriptionForApp(selectedApp);
+	alert(appDescription);
 	var appDescriptionPlaceHolder = $(".app-description-placeholder");
 	arrow.animate( {left:arrowXOffsetOfSelectedAppLink(row)}, 400, function() {
 		appDescriptionPlaceHolder.html(appDescription);
