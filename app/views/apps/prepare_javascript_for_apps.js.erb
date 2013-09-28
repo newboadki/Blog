@@ -32,12 +32,13 @@ function descriptionForApp(app) {
 	// Given an app we need to construct a dash-separated string with the name of the image
 	var imageElement = app.find('img');
 	var imageName = imageElement.attr('src');	
+	alert(imageName);
 	var components = imageName.split("/");
 	var lastComponent = components[components.length - 1];
 	var regex = /(.+)\.png|jpeg|jpg|gif/;
 	var match = regex.exec(lastComponent);
 	var imageId = match[1];	
-
+	alert(imageId);
 	// Then we need to find the element inside the description archive with that string as the id	
 	return $("#" + imageId).html();
 }
@@ -45,8 +46,7 @@ function descriptionForApp(app) {
 function moveArrow(row) {	
 	var arrow = $(".arrow-up");
 	var selectedApp = $(".app-link-highlighted");
-	var appDescription = descriptionForApp(selectedApp);
-	alert(appDescription);
+	var appDescription = descriptionForApp(selectedApp);	
 	var appDescriptionPlaceHolder = $(".app-description-placeholder");
 	arrow.animate( {left:arrowXOffsetOfSelectedAppLink(row)}, 400, function() {
 		appDescriptionPlaceHolder.html(appDescription);
