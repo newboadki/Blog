@@ -1,6 +1,8 @@
-// Place all the styles related to the blog_posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* 
+ Place all the styles related to the blog_posts controller here.
+ They will automatically be included in application.css.
+ You can use Sass (SCSS) here: http://sass-lang.com/ 
+*/
 
 .post-image {
 	width: 100%;
@@ -8,11 +10,38 @@
 	box-shadow: 1px 1px 2px #222;
 }
 
-
-.post-title {
-	font-size: 1em;
-}
-
 .post-summary {
 	font-size: 0.5em;
+}
+
+.post-image-container {
+	width: 100%;
+	overflow: hidden;
+ 	border-radius: 8px;
+	margin-top: 20px;
+}
+
+.post-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-top: 0;
+	color: #222;
+}
+
+.post-body {
+	padding-top:50px;
+}
+
+.post-date {
+	color: #444;
+	font-size: 0.8em;
+	padding-top: 5px;
+}
+
+.post-list  {
+	 list-style-type: none;
+}
+
+.post-top-padding {
+	padding-top: 100px;
 }

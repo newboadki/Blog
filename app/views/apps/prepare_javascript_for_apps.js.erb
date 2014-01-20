@@ -33,6 +33,7 @@ function descriptionForApp(app) {
 	var imageElement = app.find('img');
 	var imageName = imageElement.attr('src');	
 
+	/* !! This works in production not in development, because in production images have this structure <name>-<weirdNumber>.png */
 	var components_separated_by_slash = imageName.split("/");
 	var lastComponent_separated_by_slash = components_separated_by_slash[components_separated_by_slash.length - 1];
 	var components_separated_by_dash = lastComponent_separated_by_slash.split("-");

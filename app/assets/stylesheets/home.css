@@ -1,0 +1,29 @@
+/* 
+ Place all the styles related to the Home page here.
+ They will automatically be included in application.css.
+ You can use Sass (SCSS) here: http://sass-lang.com/ 
+ */
+
+
+.skill-title {		
+	font-size: 1.3em;
+	padding-top: 10px;
+	color: #444;
+}
+
+.skill-description {
+	margin-top: 40px;
+	text-align: left;
+	font-size: 0.9em;	
+	color: #555;
+}
+
+.matrix-skills-column {
+	width: 33%;
+}
+
+.skill-icon-image {
+	width: 10%;	
+	margin-right: 20px;	
+	float: left;
+}

@@ -1,6 +1,6 @@
 MyBlog::Application.routes.draw do
 
-scope '(:locale)' do resources :orders
+scope '(:locale)' do resources :orders # Is resources :orders needed??
   get "blog_posts/index"
   resources :apps
   resources :blog_posts
@@ -9,7 +9,6 @@ scope '(:locale)' do resources :orders
   get 'home', :controller => "static_content", :action => "home"
   root to: 'static_content#home'
 end
-
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
