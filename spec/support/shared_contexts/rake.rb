@@ -1,3 +1,5 @@
+# Defines a rake RSpec context to test rake tasks
+
 # spec/support/shared_contexts/rake.rb
 require "rake"
 
@@ -13,7 +15,6 @@ shared_context "rake" do
 
   before do
     Rake.application = rake
-    puts "#{task_name}"
     Rake.application.rake_require(task_path, [Rails.root.to_s], loaded_files_excluding_current_rake_file)
 
     Rake::Task.define_task(:environment)
