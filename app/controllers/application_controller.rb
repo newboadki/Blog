@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :set_i18n_locale_from_params
-
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found 
+  
   protected
 
   def set_i18n_locale_from_params
@@ -19,6 +20,10 @@ class ApplicationController < ActionController::Base
 
   def default_url_options
   	{locale: I18n.locale }
+  end
+
+  def record_not_found
+    render text: "404 Not Found", status: 404
   end
 
 end

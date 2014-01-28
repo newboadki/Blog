@@ -1,13 +1,21 @@
 MyBlog::Application.routes.draw do
 
-scope '(:locale)' do resources :orders # Is resources :orders needed??
-   get "blog_posts", :controller => "blog_posts", :action => "index", :as => "blog_posts"
-   get "blog_posts/:id", :controller => "blog_posts", :action => "show", :as => "blog_post"
-  resources :apps
+scope '(:locale)' do
+  
+  # blog posts
+  get "blog_posts" => "blog_posts#index", :as => "blog_posts"   
+  get "blog_posts/:id" => "blog_posts#show", :as => "blog_post"
+  
+
+  # apps
+  get "apps" => "apps#index", :as => "apps"   
 
 
-  get 'curriculum', :controller => "static_content", :action => "curriculum"
-  get 'home', :controller => "static_content", :action => "home"
+  # static content
+  # get 'curriculum' => "static_content#curriculum" 
+  get 'home' => "static_content#home"
+  
+  # Root
   root to: 'static_content#home'
 end
   
