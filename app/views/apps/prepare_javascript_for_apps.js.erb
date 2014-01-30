@@ -29,16 +29,21 @@ function arrowXOffsetOfSelectedAppLink(row) {
 }
 
 function descriptionForApp(app) {
+	// app is a <a></a> element. Contains the link to an app. 	
 	// Given an app we need to construct a dash-separated string with the name of the image
-	var imageElement = app.find('img');
+	var imageElement = app.find('img'); // Name of the image for getting the desc from the DOM archive to avoid retrieving it from the server
 	var imageName = imageElement.attr('src');	
 
 	/* !! This works in production not in development, because in production images have this structure <name>-<weirdNumber>.png */
 	var components_separated_by_slash = imageName.split("/");
 	var lastComponent_separated_by_slash = components_separated_by_slash[components_separated_by_slash.length - 1];
-	var components_separated_by_dash = lastComponent_separated_by_slash.split("-");
+	
+	/*var components_separated_by_dash = lastComponent_separated_by_slash.split("-");
 	var firstComponent_separated_by_dash = components_separated_by_dash[0];	
-	var imageId = firstComponent_separated_by_dash;	
+	var imageId = firstComponent_separated_by_dash;	*/
+	var components_separated_by_dot = lastComponent_separated_by_slash.split(".");
+	var firstComponent_separated_by_dot = components_separated_by_dot[0];
+	var imageId = firstComponent_separated_by_dot;
 	
 	// Then we need to find the element inside the description archive with that string as the id	
 	return $("#" + imageId).html();
@@ -49,7 +54,7 @@ function moveArrow(row) {
 	var selectedApp = $(".app-link-highlighted");
 	var appDescription = descriptionForApp(selectedApp);	
 	var appDescriptionPlaceHolder = $(".app-description-placeholder");
-	arrow.animate( {left:arrowXOffsetOfSelectedAppLink(row)}, 400, function() {
+	arrow.animate( {left:arrowXOffsetOfSelectedAppLink(row)}, 400, function() {		
 		appDescriptionPlaceHolder.html(appDescription);
 	});
 
@@ -112,7 +117,7 @@ $('.app-link').each(function() {
 			// Add the newly selected app link
 			$(this).addClass("app-link-highlighted");
 
-			// Move the arrow
+			// Move the arrow and populate description placeholder
 			moveArrow(rowClass);
 
 		} else { // If the clicked icon is in a different row than the currently selected one

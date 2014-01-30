@@ -9,7 +9,7 @@ scope '(:locale)' do
 
   # apps
   get "apps" => "apps#index", :as => "apps"   
-
+  get "apps/:id" => "apps#show", :as => "app"   
 
   # static content
   # get 'curriculum' => "static_content#curriculum" 

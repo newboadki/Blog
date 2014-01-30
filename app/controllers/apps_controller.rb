@@ -16,7 +16,7 @@ class AppsController < ApplicationController
     	i += 1
     end
 
-    # respose
+    # response
   	respond_to do |format|
   		format.html
   		format.js { render('apps/prepare_javascript_for_apps', :locals => {:template_name => 'apps/index.html.erb'}) }
