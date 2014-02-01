@@ -1,3 +1,5 @@
+/* ***** HELPERS *************************************** */
+
 function rowClassOfElement(element)  {	
 	if((element == null) || (element.length == 0)) {
 		return;
@@ -38,12 +40,14 @@ function descriptionForApp(app) {
 	var components_separated_by_slash = imageName.split("/");
 	var lastComponent_separated_by_slash = components_separated_by_slash[components_separated_by_slash.length - 1];
 	
-	/*var components_separated_by_dash = lastComponent_separated_by_slash.split("-");
+	var components_separated_by_dash = lastComponent_separated_by_slash.split("-");
 	var firstComponent_separated_by_dash = components_separated_by_dash[0];	
-	var imageId = firstComponent_separated_by_dash;	*/
+	var imageId = firstComponent_separated_by_dash;
+	
+	/* For Debugging; replace the above lines for the below equivalent
 	var components_separated_by_dot = lastComponent_separated_by_slash.split(".");
 	var firstComponent_separated_by_dot = components_separated_by_dot[0];
-	var imageId = firstComponent_separated_by_dot;
+	var imageId = firstComponent_separated_by_dot;*/
 	
 	// Then we need to find the element inside the description archive with that string as the id	
 	return $("#" + imageId).html();
@@ -87,11 +91,12 @@ function toogleExpansionRow(expansionRow) {
 }
 
 
+/* ***** ACTUAL SCRIPT *************************************** */
 
 $('#content').html('<%= escape_javascript render("#{template_name}") %>'); // Replace content
 
 $('.app-link').each(function() {
-	$(this).click(function(event) {
+	$(this).click(function(event) { // This is the rutine to expend/collapse the rows of applications.
 
 		event.preventDefault();
 		
