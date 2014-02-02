@@ -90,55 +90,56 @@ function toogleExpansionRow(expansionRow) {
 	}
 }
 
+function add_expandable_row_behaviour_app_links() {
+	$('.app-link').each(function() {
+		$(this).click(function(event) { // This is the rutine to expend/collapse the rows of applications.
 
-$('.app-link').each(function() {
-	$(this).click(function(event) { // This is the rutine to expend/collapse the rows of applications.
+			event.preventDefault();
 
-		event.preventDefault();
-	
-		var currentlySelectedAppLink = $(".app-link-highlighted");
-		var rowOfCurrentlySelectedLink = rowClassOfElement(currentlySelectedAppLink);
-		var isCurrentLinkSelected = $(this).hasClass('app-link-highlighted');
-		var rowClass = rowClassOfElement($(this));
-		var currentLinkExpansionRow = $(".expansion-row" + "." + rowClass);
+			var currentlySelectedAppLink = $(".app-link-highlighted");
+			var rowOfCurrentlySelectedLink = rowClassOfElement(currentlySelectedAppLink);
+			var isCurrentLinkSelected = $(this).hasClass('app-link-highlighted');
+			var rowClass = rowClassOfElement($(this));
+			var currentLinkExpansionRow = $(".expansion-row" + "." + rowClass);
 
-		if (isCurrentLinkSelected) {
-			// We close its expansion row
-			closeExpansionRow(currentLinkExpansionRow);
+			if (isCurrentLinkSelected) {
+				// We close its expansion row
+				closeExpansionRow(currentLinkExpansionRow);
 
-			// Remove the selected
-			currentlySelectedAppLink.removeClass('app-link-highlighted');
+				// Remove the selected
+				currentlySelectedAppLink.removeClass('app-link-highlighted');
 
-		} else if (rowClass == rowOfCurrentlySelectedLink) { // if the clicked icon is in the same row as the currently selected one
-			// Don't close the row
+			} else if (rowClass == rowOfCurrentlySelectedLink) { // if the clicked icon is in the same row as the currently selected one
+				// Don't close the row
 
-			// Remove the currently highlighted
-			currentlySelectedAppLink.removeClass("app-link-highlighted");
+				// Remove the currently highlighted
+				currentlySelectedAppLink.removeClass("app-link-highlighted");
 
-			// Add the newly selected app link
-			$(this).addClass("app-link-highlighted");
+				// Add the newly selected app link
+				$(this).addClass("app-link-highlighted");
 
-			// Move the arrow and populate description placeholder
-			moveArrow(rowClass);
+				// Move the arrow and populate description placeholder
+				moveArrow(rowClass);
 
-		} else { // If the clicked icon is in a different row than the currently selected one
+			} else { // If the clicked icon is in a different row than the currently selected one
 
-			// // Remove the currently highlighted
-			 currentlySelectedAppLink.removeClass("app-link-highlighted");
+				// // Remove the currently highlighted
+				 currentlySelectedAppLink.removeClass("app-link-highlighted");
 
-			// Add the newly selected app link
-			$(this).addClass("app-link-highlighted");
+				// Add the newly selected app link
+				$(this).addClass("app-link-highlighted");
 
-			// Open and close expansion rows
-			$('.expansion-row').each(function() {
-				var currentRowClass = rowClassOfElement($(this));
+				// Open and close expansion rows
+				$('.expansion-row').each(function() {
+					var currentRowClass = rowClassOfElement($(this));
 
-				if (currentRowClass == rowClass) {
-					toogleExpansionRow($(this));
-				} else {				
-					closeExpansionRow($(this));
-				}
-			});
-		}
+					if (currentRowClass == rowClass) {
+						toogleExpansionRow($(this));
+					} else {				
+						closeExpansionRow($(this));
+					}
+				});
+			}
+		});
 	});
-});
+}
