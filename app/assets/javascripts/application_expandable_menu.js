@@ -4,13 +4,13 @@ function rowClassOfElement(element)  {
 	if((element == null) || (element.length == 0)) {
 		return;
 	}
-	
+
 	var classList = element.attr('class').split(/\s+/);
 	var result = null;
-	
+
 	$.each( classList, function(index, classItem) {
 		var regex = /row-[0-9]+/;
-		
+	
 	    if (classItem.match(regex)) {
 	    	result = classItem;
 	    }
@@ -39,16 +39,16 @@ function descriptionForApp(app) {
 	/* !! This works in production not in development, because in production images have this structure <name>-<weirdNumber>.png */
 	var components_separated_by_slash = imageName.split("/");
 	var lastComponent_separated_by_slash = components_separated_by_slash[components_separated_by_slash.length - 1];
-	
+
 	var components_separated_by_dash = lastComponent_separated_by_slash.split("-");
 	var firstComponent_separated_by_dash = components_separated_by_dash[0];	
 	var imageId = firstComponent_separated_by_dash;
-	
+
 	/* For Debugging; replace the above lines for the below equivalent
 	var components_separated_by_dot = lastComponent_separated_by_slash.split(".");
 	var firstComponent_separated_by_dot = components_separated_by_dot[0];
 	var imageId = firstComponent_separated_by_dot;*/
-	
+
 	// Then we need to find the element inside the description archive with that string as the id	
 	return $("#" + imageId).html();
 }
@@ -91,15 +91,11 @@ function toogleExpansionRow(expansionRow) {
 }
 
 
-/* ***** ACTUAL SCRIPT *************************************** */
-
-$('#content').html('<%= escape_javascript render("#{template_name}") %>'); // Replace content
-
 $('.app-link').each(function() {
 	$(this).click(function(event) { // This is the rutine to expend/collapse the rows of applications.
 
 		event.preventDefault();
-		
+	
 		var currentlySelectedAppLink = $(".app-link-highlighted");
 		var rowOfCurrentlySelectedLink = rowClassOfElement(currentlySelectedAppLink);
 		var isCurrentLinkSelected = $(this).hasClass('app-link-highlighted');

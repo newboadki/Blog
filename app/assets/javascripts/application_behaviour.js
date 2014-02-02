@@ -30,3 +30,28 @@ $(document).ready(function() {
 	     });
 	 });
 });
+
+
+
+/* Alternative for using link_to remote => true to trigger ajax. Downside we lose the capability to control animations
+as this happens in the beforeSend, but the animation itself runs in another thread, therefore the actual ajax request is sent 
+while the animation is in progress. therefore, when you start your animation in success, this two animations could be
+potentially overlapping.
+
+$(document).ready(function() {
+	$('.main-menu-link').bind("ajax:beforeSend", function(evt, xhr, settings) {		
+		$('#content').css('opacity', 0.0);
+		$('.loading-hud').css('display', 'block');
+		$('#content-area').removeClass('content-area-not-loading');
+		$('#content-area').addClass('content-area-loading');		
+	 });
+
+	$('.main-menu-link').bind("ajax:success", function(evt, xhr, settings) {				
+		var link = $(this).attr('href');
+		history.pushState(null, "", link);
+		$('#content-area').removeClass('content-area-loading');
+		$('#content-area').addClass('content-area-not-loading'); 
+		$('.loading-hud').css('display', 'none');
+		$('#content').animate({opacity: 1.0}, 800);
+	 });	
+});*/
