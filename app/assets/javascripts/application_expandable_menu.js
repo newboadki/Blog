@@ -90,7 +90,7 @@ function toogleExpansionRow(expansionRow) {
 	}
 }
 
-function add_expandable_row_behaviour_app_links() {
+function addExpandableRowBehaviourToAppLinks() {
 	$('.app-link').each(function() {
 		$(this).click(function(event) { // This is the rutine to expend/collapse the rows of applications.
 
