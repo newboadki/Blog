@@ -2,21 +2,32 @@ MyBlog::Application.routes.draw do
 
 scope '(:locale)' do
   
-  # blog posts
+  # Authentication
+  devise_for :users
+  
+  # Blog posts
   get "blog_posts" => "blog_posts#index", :as => "blog_posts"   
   get "blog_posts/:id" => "blog_posts#show", :as => "blog_post"
   
 
-  # apps
+  # Apps
   get "apps" => "apps#index", :as => "apps"   
   get "apps/:id" => "apps#show", :as => "app"   
 
-  # static content
+  # Static content
   # get 'curriculum' => "static_content#curriculum" 
   get 'home' => "static_content#home"
   
   # Root
   root to: 'static_content#home'
+end
+
+
+
+namespace 'admin' do
+  
+  get "dashboard" => "dashboards#summary"
+  
 end
   
   # The priority is based upon order of creation: first created -> highest priority.

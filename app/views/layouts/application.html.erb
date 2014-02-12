@@ -12,8 +12,18 @@
 	<body>
 		<div id="page">
 			
+			<% if current_user%>
+				<%= link_to "Sign out", destroy_user_session_path(current_user), :method => :delete %><br />
+			<% end %>
+
 			<%= render("partial_templates/header.html.erb") %>
+			
 			<%= render("partial_templates/main_menu.html.erb") %>
+			
+		    <p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+			
+			
 			<div id="content-area" class="content-area-not-loading">
 				<div class="loading-hud"><%= image_tag("spinner.gif") %></div>
 				<div id="content" class="content">				

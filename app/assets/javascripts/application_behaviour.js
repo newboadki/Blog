@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 /* Alternative for using link_to remote => true to trigger ajax. Downside we lose the capability to control animations
 as this happens in the beforeSend, but the animation itself runs in another thread, therefore the actual ajax request is sent 
-while the animation is in progress. therefore, when you start your animation in success, this two animations could be
+while the animation is in progress. therefore, when you start your animation in success, these two animations could be
 potentially overlapping.
 
 $(document).ready(function() {
