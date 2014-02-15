@@ -1,1 +1,9 @@
-SUMMARY !!
+<table>
+
+	<% @report[:blog_posts].each do |blog_post| %>
+		<tr><th><%= blog_post.title %></th> <th><%= link_to "edit", edit_admin_blog_post_path(blog_post.id) %></th><th><%= link_to "delete", admin_blog_post_path(blog_post.id), :method => :delete, :confirm => "About to DELETE a blog post" %></th></tr>
+	<% end %>
+	
+	<tr><th><%= link_to "Add post", new_admin_blog_post_path %></th></tr>
+
+</table>

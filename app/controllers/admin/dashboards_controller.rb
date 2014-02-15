@@ -4,7 +4,8 @@ class Admin::DashboardsController < ApplicationController
   
   # Collects all the required information about different models to show in one view 
   def summary
-    @report = {}
+    blog_posts = BlogPost.ordered_by_created_at('DESC');
+    @report = { :blog_posts =>  blog_posts }
   end
   
 end

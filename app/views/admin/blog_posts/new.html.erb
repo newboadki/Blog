@@ -1,0 +1,14 @@
+<%= form_for [:admin, @blog_post] do |f| %>
+
+  <%= f.label :title, 'Title' %>
+  <%= f.text_field :title %> </br>
+  
+  <%= f.label :body, 'Body' %>
+  <%= f.text_area :body %></br>
+  
+  <%= f.label :image_src, 'Image path' %>
+  <%= f.text_field :image_src %> </br> 
+  
+  <%= f.submit @blog_post.new_record? ? "Create" : "Update" %>
+
+<% end %>

@@ -1,5 +1,14 @@
 MyBlog::Application.routes.draw do
 
+namespace 'admin' do
+
+  get "dashboard" => "dashboards#summary"
+
+  resources :blog_posts, :except => [:index, :show]
+  
+end
+
+
 scope '(:locale)' do
   
   # Authentication
@@ -20,14 +29,6 @@ scope '(:locale)' do
   
   # Root
   root to: 'static_content#home'
-end
-
-
-
-namespace 'admin' do
-  
-  get "dashboard" => "dashboards#summary"
-  
 end
   
   # The priority is based upon order of creation: first created -> highest priority.
