@@ -172,12 +172,12 @@ time, mark, audio, video {
 .content-area-not-loading
 {
 	/*background-color: #d4ae7d; /*#734A26*/
-	background: #fff url('noise.png');
+	background: #fff url(<%= asset_path 'noise.png' %>);
 }
 
 .content-area-loading
 {
-	background: #fff url('noise.png');
+	background: #fff url(<%= asset_path 'noise.png' %>);
 }
 
 
@@ -244,7 +244,7 @@ p.subtitle
 	margin-left:auto;
 	margin-right:auto;
 	margin-top: 0;
-	background: #fff url( <%= asset_path 'circles_menu_bg_template.svg' %>);/*   283B4A*/
+	background: rgb(256, 256, 256) url( <%= asset_path 'circles_menu_bg_template.svg' %>);/*   283B4A*/
 	height: 100px;
 	font-family: "helvetica";	
 	font-weight: bold;
