@@ -1,7 +1,9 @@
 class BlogPostsController < ApplicationController
   
   def index
-  	@posts = BlogPost.ordered_by_created_at('DESC');
+  	
+    @section_title = "Web Log"
+    @posts = BlogPost.ordered_by_created_at('DESC');
   	  	  	   
   	respond_to do |format|
   		format.html

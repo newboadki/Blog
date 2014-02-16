@@ -213,8 +213,8 @@ h1.title
 	margin-top: 20px;
 	font-size: 2.5em;
 	color: #222222;
-	width:70%;
-	text-align: center;
+	width:65%;
+	/*text-align: center;*/
 }
 
 
@@ -224,18 +224,18 @@ p.subtitle
 	margin-right: auto;
 	margin-bottom: 0;
 	margin-top: 0;
-	width:70%;
+	width:65%;
 
 	padding-bottom: 25px;
 	font-size: 1.5em;	
 	color: #777777;
 	font-style: oblique;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 
 /* Application Menu*/
-.horizontal_menu
+.section_title
 {
 	list-style-type: none;
 	padding: 0;	
@@ -244,15 +244,17 @@ p.subtitle
 	margin-left:auto;
 	margin-right:auto;
 	margin-top: 0;
-	background: #111 url('noisier.png');/*   283B4A*/
-	height: 45px;
+	background: #fff url('circles_menu_bg_template.svg');/*   283B4A*/
+	height: 100px;
 	font-family: "helvetica";	
 	font-weight: bold;
 }
 
 .horizontal_menu ol 
 {
-	margin-top: 0;
+	float:right;
+	margin-right:280px;
+	margin-top: 35px;
 	padding-top: 15px;
 	padding-bottom: 15px;		
 }
@@ -293,6 +295,7 @@ p.subtitle
 	text-align: center;	
 	font-family: "helvetica";
 	font-weight: bold;
+	padding-top:25px;
 }
 
 

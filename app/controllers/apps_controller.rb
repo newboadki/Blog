@@ -4,6 +4,8 @@ class AppsController < ApplicationController
 
   def index
 
+    @section_title = "iOS Applications"
+    
     # Create the rows
     @rows = []
     @apps = Application.all.ordered_by_created_at('DESC')

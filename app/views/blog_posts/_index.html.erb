@@ -1,16 +1,10 @@
-<div class="row  row-top-padding row-bottom-margin">
-	<div class="grid-unit page-title-column">
-		<h2 class="about-us page-title"><%= t('page_sections.blog.title') %></h2>
-   </div>
-</div>
-
 <ul class="row post-list">
 	<% for post in @posts 
 		type = cycle("left-image", "right-image")
 	%>
 
 		<% if (type == "left-image") %>
-			<li class="row with-margins borja">
+			<li class="row with-margins post-top-padding">
 				<div class="page-column">
 					<div class="grid-unit main-column">
 						<h3 class="post-title"><%= post.title %></h3>
