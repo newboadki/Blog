@@ -23,7 +23,7 @@ en:
   page_sections:
     home:
       title: "What this is about"
-      about_this_page: "I am a software engineer and I live in London. Basketball player. Occasional runner. Avid reader. Nomad of the modern times, having worked in Norway, London and Cape Town, SA. Believer in the idea that better software is possible. </br>Currently I work writing software for iOS platforms, but the core of what fascinates me about software engineering is platform independent. I love solving scalability and resusability problems, asbtracting the concrete, simplifying the entangled."
+      about_this_page: "I am a software engineer and I live in London. Basketball player. Occasional runner. Avid reader. Nomad of the modern times, having worked in Norway, London and Cape Town, SA. Believer in the idea that better software is possible. </br>Currently I work writing software for iOS platforms, but the core of what fascinates me about software engineering is platform independent. I love solving scalability and reusability problems, asbtracting the concrete, simplifying the entangled."
       skills:
         studies:
           title: "Computer Science"

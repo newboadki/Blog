@@ -1,4 +1,4 @@
-/* Renamed file to fix precedence issue between grid-unit and app-description-column */
+/* Renamed file to make it be the first one to fix precedence issue between grid-unit and app-description-column */
 
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
@@ -55,10 +55,8 @@ time, mark, audio, video {
   box-sizing: border-box;
   display: block;
   float: left;
-  /*padding: 0 1.5em;*/
   padding-right: 1.5em;
   width: 100%;  
-  /*background-color: #0f0;*/
 }
 
 
@@ -184,9 +182,8 @@ time, mark, audio, video {
 
 .footer
 {
-	background-color: #000000;
 	color: #777;
-	background: #111 ;/*url('noiseportra')*/
+	background: rgb(10, 10, 10) url( <%= asset_path 'noise.png' %>);
 	font-family: "Helvetica";
 	padding-top: 65px;
 }
@@ -212,7 +209,7 @@ h1.title
 	margin-bottom: 0;
 	margin-top: 20px;
 	font-size: 2.5em;
-	color: #222222;
+	color: #555;
 	width:65%;
 	/*text-align: center;*/
 }
@@ -244,10 +241,16 @@ p.subtitle
 	margin-left:auto;
 	margin-right:auto;
 	margin-top: 0;
-	background: rgb(255, 255, 255) url( <%= asset_path 'circles_menu_bg_template.svg' %>);/*   283B4A*/
+	background: rgb(255, 255, 255) url( <%= asset_path 'circles_menu_bg_template.svg' %>);
 	height: 100px;
 	font-family: "helvetica";	
 	font-weight: bold;
+}
+
+.section_title.is-loading
+{
+	font-weight: normal;
+	font-size: 0.7em;
 }
 
 .horizontal_menu ol 

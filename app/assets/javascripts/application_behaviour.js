@@ -8,13 +8,20 @@ $(document).ready(function() {
 
 			var link = $(this).attr('href');
 			var link_url = $(this).attr('href') + ".js"; // So rails interprets this as Ajax.
+			$('.section_title h2').animate({opacity: 0.0}, 200,  
+				function() {
+					// Completion block
+					$('.section_title h2').html("Loading...");
+					$('.section_title h2').animate({opacity: 1.0}, 200);
+					$('.section_title').addClass('is-loading');
+			});
 			$('#content').animate({opacity: 0.0}, 200,  
 				function() {
     				// Animation complete.   
 
 					$.ajax({
 						url: link_url,
-						beforeSend: function ( xhr ) {
+						beforeSend: function ( xhr ) {							
     						$('.loading-hud').css('display', 'block');
     						$('#content-area').removeClass('content-area-not-loading');
     						$('#content-area').addClass('content-area-loading');
@@ -25,6 +32,7 @@ $(document).ready(function() {
     					$('#content-area').addClass('content-area-not-loading'); 
 						$('.loading-hud').css('display', 'none');
 						$('#content').animate({opacity: 1.0}, 400);
+						$('.section_title').removeClass('is-loading');
 					});
 				});
 	     });

@@ -1,7 +1,6 @@
 class BlogPostsController < ApplicationController
   
   def index
-  	
     @section_title = "Web Log"
     @posts = BlogPost.ordered_by_created_at('DESC');
   	  	  	   
