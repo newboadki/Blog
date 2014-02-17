@@ -23,16 +23,16 @@ en:
   page_sections:
     home:
       title: "What this is about"
-      about_this_page: "I am a software engineer and I live in London. Basketball player. Occasional runner. Avid reader. Nomad of the modern times, having worked in Norway, London and Cape Town, SA. Believer in the idea that better software is possible. </br>Currently I work writing software for iOS platforms, but the core of what fascinates me about software engineering is platform independent. I love solving scalability and reusability problems, asbtracting the concrete, simplifying the entangled."
+      about_this_page: "I am a software engineer and live in London. Basketball player. Occasional runner. Avid reader. Nomad of the modern times, having worked in Norway, London and Cape Town, SA. Believer in the idea that better software is possible. </br>Currently I work writing software for iOS platforms, but the core of what fascinates me about software engineering is platform independent. My passion is to solve scalability and reusability problems, asbtracting the concrete, simplifying the entangled."
       skills:
         studies:
           title: "Computer Science"
-          desc: "I have a master degree in Computer Science from the University of Seville, Spain, where specialised in software development. For my master thesis, I worked on a project to create a colaborative web-based tool for research groups, where members could effectively share information and keep track of what other member and or groups were doing."
+          desc: "I have a master degree in Computer Science from the University of Seville, Spain, where I specialised in software development. These studies focus a great deal on providing theorical knowledge and on learning how to break big problems into small pieces and how to develop pacience, which is crucial when solving complex tasks."
         ios:
           title: "iOS Development"
-          desc: "I work as an iOS engineer for IG Index in London. But I have been developing for Apple platforms for nearly four years. I love every second of it. I have developed for diferent platforms, and what I like the most about this one is the degree of proffesionalism of the tools, APIS and reference materials. This platform leads the way in many respects and has set the bar incredibly high in terms of what the user expects from software and that is remarkable."
+          desc: "iOS development has been the focus of my work in recent years, having done it for over four years now. I currently work as an iOS engineer for IG Index in London. I find that the expossure to Apple frameworks is a window to a not so common development approach these days, where they spend a lot of time in perfecting their products and APIs during long release cycles. This platform leads the way in many respects and has set the bar incredibly high in terms of what the user expects from software and that is remarkable."
         web:
           title: "Web Development"
-          desc: "I have a background in web development. I have worked with several languages and frameworks including Java, Google Web Toolkit and Ruby on Rails with which this web site has been writen. I watch with interest how different technologies evolve and influence other technologies. In particular, I am amazed by the huge impact that iOS has made in web development."
+          desc: "My beginnings as a programmers revolved around web development. I have worked with several languages and frameworks including Java, Google Web Toolkit and Ruby on Rails, which is what this web site has been writen in. I watch with interest how different technologies evolve and influence others. The progression of tools and languages has been remarkable during the past 10 years. It really inspires us about what we’ll do next."
     blog:
       title: "Web Log"

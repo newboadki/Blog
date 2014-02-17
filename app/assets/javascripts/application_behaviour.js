@@ -8,17 +8,20 @@ $(document).ready(function() {
 
 			var link = $(this).attr('href');
 			var link_url = $(this).attr('href') + ".js"; // So rails interprets this as Ajax.
+			
+			// Fade out the section title
 			$('.section_title h2').animate({opacity: 0.0}, 200,  
 				function() {
-					// Completion block
+					// Change text to Loading and animate it back 
 					$('.section_title h2').html("Loading...");
 					$('.section_title h2').animate({opacity: 1.0}, 200);
 					$('.section_title').addClass('is-loading');
 			});
+			
+			// Fade out the content
 			$('#content').animate({opacity: 0.0}, 200,  
 				function() {
-    				// Animation complete.   
-
+    				// Make ajax request when complete
 					$.ajax({
 						url: link_url,
 						beforeSend: function ( xhr ) {							
