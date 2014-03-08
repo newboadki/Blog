@@ -1,0 +1,107 @@
+/* 
+ Place all the styles related to the blog_posts controller here.
+ They will automatically be included in application.css.
+ You can use Sass (SCSS) here: http://sass-lang.com/ 
+*/
+
+.post-image {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px #222;
+}
+
+.post-summary {
+	font-size: 0.5em;
+}
+
+.post-image-container {
+	width: 100%;
+	overflow: hidden;
+ 	border-radius: 8px;
+	margin-top: 20px;
+}
+
+.post-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-top: 0;
+	color: #222;
+}
+
+.post-body {
+	padding-top:50px;
+}
+
+.post-date {
+	color: #444;
+	font-size: 0.8em;
+	padding-top: 5px;
+}
+
+.post-list  {
+	 list-style-type: none;
+}
+
+.post-buttet-items-list  {
+	padding-left: 30px;
+	padding-top:20px;
+}
+
+
+.post-top-padding {
+	padding-top: 100px;
+}
+
+.separation-of-concerns {
+	margin-top: 30px;
+	margin-left:auto;
+	margin-right:auto;
+	height:299px;
+	width:527px;
+	background: url( <%= asset_path 'overall_diagram.png' %>);	
+}
+
+.view-controller-hierarchy {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 30px;
+	height:316px;
+	width:686px;
+	background: url( <%= asset_path 'view_controller_hierarhcy.png' %>);	
+}
+
+.cell-diagram {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 30px;
+	height:217px;
+	width:787px;
+	background: url( <%= asset_path 'cell_diagram.png' %>);	
+}
+
+.cell-event-hierarchy {
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top: 30px;
+	height:147px;
+	width:612px;
+	background: url( <%= asset_path 'cell_event_hierarchy.png' %>);	
+}
+
+.cell-data-source-protocol {
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top: 30px;
+	height:331px;
+	width:661px;
+	background: url( <%= asset_path 'protocol.png' %>);	
+}
+
+.expenses-form {
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top: 30px;
+	height:354px;
+	width:632px;
+	background: url( <%= asset_path 'Form.png' %>);	
+}
