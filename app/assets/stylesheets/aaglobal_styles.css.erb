@@ -155,31 +155,15 @@ time, mark, audio, video {
 
 
 #content-area {
-	color: #111111;
 	margin-left:auto;
 	margin-right:auto;	
 	font-family: "helvetica";
 	text-align: left;
 	font-size: 1.2em;
 	line-height: 1.4em;
-
 	position: relative;
 	padding-bottom: 45px;
 }
-
-
-.content-area-not-loading
-{
-	/*background-color: #d4ae7d; /*#734A26*/
-	background: #fff url(<%= asset_path 'noise.png' %>);
-}
-
-.content-area-loading
-{
-	background: #fff url(<%= asset_path 'noise.png' %>);
-}
-
-
 
 .footer
 {
@@ -210,9 +194,7 @@ h1.title
 	margin-bottom: 0;
 	margin-top: 20px;
 	font-size: 2.5em;
-	color: #555;
 	width:65%;
-	/*text-align: center;*/
 }
 
 
@@ -225,15 +207,13 @@ p.subtitle
 	width:65%;
 
 	padding-bottom: 25px;
-	font-size: 1.5em;	
-	color: #777777;
+	font-size: 1.5em;
 	font-style: oblique;
-	/*text-align: center;*/
 }
 
 
 /* Application Menu*/
-.section_title
+.section-title
 {
 	list-style-type: none;
 	padding: 0;	
@@ -241,14 +221,13 @@ p.subtitle
 	width: 100%;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top: 0;
-	background: rgb(255, 255, 255) url( <%= asset_path 'circles_menu_bg_template.svg' %>);
+	margin-top: 0;	
 	height: 100px;
 	font-family: "helvetica";	
 	font-weight: bold;
 }
 
-.section_title.is-loading
+.section-title.is-loading
 {
 	font-weight: normal;
 	font-size: 0.7em;
@@ -358,13 +337,100 @@ p.subtitle
 }
 
 .blog_post_parragraph {
-	padding-top: 30px;
+	padding-top: 30px;	
+}
+
+.blog_post_parragraph_after_section_title {
+	padding-top: 10px;
 	
 }
 
+span.bold-text {
+	font-weight:bold;
+}
 
 
 /* Code formatting*/
 code {
 	font-size: 0.7em;
+}
+
+
+
+.white-theme {
+	color: #111;
+	background:#fff;	
+	-webkit-transition: color 1.0s ease-out;
+	-webkit-transition: background 1.0s ease-out;
+	
+}
+
+.black-theme {
+	color: #eee;
+	background:#000;
+	-webkit-transition: color 1.0s ease;
+	-webkit-transition: background 1.0s ease;
+}
+
+#content-area.white-theme {
+	background: rgb(255, 255, 255) url(<%= asset_path 'noise.png' %>);
+	-webkit-transition: color 1.0s ease;
+	-webkit-transition: background 1.0s ease;
+	
+}
+
+#content-area.black-theme {
+	background: rgb(0, 0, 0) url(<%= asset_path 'noise.png' %>);
+	-webkit-transition: color 1.0s ease;
+	-webkit-transition: background 1.0s ease;
+	
+}
+
+.white-theme.section-title {
+	color: #111;
+	background: rgb(255, 255, 255) url( <%= asset_path 'circles_menu_bg_template.svg' %>);	
+	-webkit-transition: color 1.0s ease;
+	-webkit-transition: background 1.0s ease;
+}
+
+.black-theme.section-title {
+	color: #aaa;
+	background: rgb(0, 0, 0) url( <%= asset_path 'circles_menu_bg_template.svg' %>);
+	-webkit-transition: color 1.0s ease;
+	-webkit-transition: background 1.0s ease;
+}
+
+
+.header.white-theme h1.title {
+	color: #555;
+}
+
+.header.black-theme h1.title {
+	color: #aaa;
+}
+
+.header.white-theme p.subtitle {
+	color: #777;
+}
+
+.header.black-theme p.subtitle {
+	color: #aaa;
+}
+
+.resume-company-section {
+	padding-top:100px;
+	font-family:helvetica;
+	text-align: center;	
+}
+
+.resume-company-name {
+	font-size: 1.5em;
+}
+
+.resume-company-location {
+	font-size: 0.5em;
+}
+
+.resume-job-description {
+	font-size: 1.0em;
 }
