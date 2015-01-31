@@ -1,7 +1,27 @@
 require 'spec_helper'
 
 describe BlogPostsController do
+
   describe "index" do
+
+    context "Templates being rendered" do
+
+      it "should render replace_content_with_ajax when ajax request" do
+        xhr :get, 'index'
+        response.should render_template 'partial_templates/replace_content_with_ajax'
+      end
+
+      it "should render with ajax if format is js" do      
+        xhr :get, 'index'
+        response.content_type.should == Mime::JS
+      end
+
+      it "should not render with ajax if format is html" do      
+        get :index
+        response.content_type.should == Mime::HTML
+      end
+
+    end
 
     context "there are no blog posts" do
       before(:all) do

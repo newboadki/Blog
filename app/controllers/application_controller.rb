@@ -32,4 +32,13 @@ class ApplicationController < ActionController::Base
     render text: "404 Not Found", status: 404
   end
 
+  def respond_to_replacing_content_with_ajax(folder_name, template_name, title = nil)    
+    @section_title = title
+    respond_to do |format|
+      format.html {}
+      format.js { render('partial_templates/replace_content_with_ajax', :locals => {:template_name => "#{folder_name}/#{template_name}.html.erb"}) }
+    end    
+  end
+
+
 end

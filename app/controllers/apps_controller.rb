@@ -11,10 +11,7 @@ class AppsController < ApplicationController
     @apps = Application.all.ordered_by_created_at('DESC')
     populate_rows_with_apps()
         
-  	respond_to do |format|
-  		format.html
-      format.js { render('partial_templates/replace_content_with_ajax', :locals => {:template_name => 'apps/index.html.erb'}) }
-  	end
+    respond_to_replacing_content_with_ajax('apps', 'index')
   end
 
   def show
