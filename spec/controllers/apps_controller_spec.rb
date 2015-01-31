@@ -35,7 +35,7 @@ describe AppsController do
       
       it "should return the list of apps per row" do
         get :index
-        assigns(:rows).map{|row| row}.should == []
+        assigns(:apps).map{|row| row}.should == []
       end      
       
     end
@@ -63,7 +63,7 @@ describe AppsController do
         # how to avoid this?
         @app1.reload; @app2.reload; @app3.reload; @app4.reload; @app5.reload; @app6.reload
                 
-        assigns(:rows).map{|p| p}.should == [[@app6, @app5, @app4, @app3], [@app2, @app1]]
+        assigns(:apps).map{|p| p}.should == [@app6, @app5, @app4, @app3, @app2, @app1]
       end      
          
     end

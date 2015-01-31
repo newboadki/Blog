@@ -1,7 +1,9 @@
+<% rows = matrix_rows(@apps, 4) %>
+
 <ul class="row post-list">
 
 	<% 	row_index = 0
-		@rows.each do |row| %>
+		rows.each do |row| %>
 		<li class="row with-margins apps-row-top-padding">
 			<% row.each do |app| %>
 				<div class="grid-unit apps-matrix-column ">
