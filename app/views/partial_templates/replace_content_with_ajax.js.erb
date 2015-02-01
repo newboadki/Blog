@@ -1,2 +1,2 @@
-$('#content').html('<%= escape_javascript render("#{template_name}") %>');
-$('.section-title h2').html('<%= escape_javascript render( :text => "#{@section_title}") %>');
+$('#content').html('<%= escape_javascript render(:template => "#{template_name}") %>');
+$('.section-title h2').html('<%= escape_javascript render( :text => "#{section_title}") %>');

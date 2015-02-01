@@ -4,6 +4,20 @@ describe AppsController do
   
   describe "index" do
 
+    context "Title of the page" do
+
+      it "should set the title when HTML request" do
+        get 'index'
+        assigns(:section_title).should == 'iOS Applications'
+      end
+
+      it "should set the title when AJAX request" do
+        xhr :get, 'index'
+        assigns(:section_title).should == 'iOS Applications'
+      end
+
+    end
+
     context "Templates being rendered" do
 
       it "should render replace_content_with_ajax when ajax request" do

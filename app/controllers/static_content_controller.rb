@@ -1,7 +1,8 @@
 class StaticContentController < ApplicationController
 
   def home
-    respond_to_replacing_content_with_ajax('static_content', 'home', "What this is about")
+  	@section_title = "What this is about" # Needs to be here in case the request is not AJAX  	
+    respond_to_replacing_content_with_ajax('static_content', 'home', @section_title)
   end
 
   # def curriculum
