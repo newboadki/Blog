@@ -32,6 +32,7 @@ group :development, :test do
   gem 'debugger'
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem "webrat", ">= 0.7.2.beta.1"
 end
 
 group :production do

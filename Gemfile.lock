@@ -80,8 +80,11 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
+    mini_portile (0.6.2)
     minitest (4.7.3)
     multi_json (1.7.2)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -146,6 +149,10 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.3)
       rack (>= 1.0)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
 
 PLATFORMS
   ruby
@@ -165,3 +172,4 @@ DEPENDENCIES
   sass-rails (~> 4.0.0.beta1)
   sqlite3
   uglifier (>= 1.0.3)
+  webrat (>= 0.7.2.beta.1)

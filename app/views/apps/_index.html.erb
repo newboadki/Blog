@@ -2,39 +2,15 @@
 
 <ul class="row post-list">
 
-	<% 	row_index = 0
-		rows.each do |row| %>
-		<li class="row with-margins apps-row-top-padding">
-			<% row.each do |app| %>
-				<div class="grid-unit apps-matrix-column ">
-					<%= link_to(app_path(app), :class=>"app-link row-#{row_index}") do %>
-						<%= image_tag(app.image_src, {:class => "app-icon"}) %>
-					<% end %>					
-					<p><%= app.name %></p>
-				</div>
-			<% end %>
-		</li>
-		<li class="row app-description-row-hidden expansion-row row-<%= row_index %>">
-			<div class="arrow-up row-<%= row_index %>"></div>
-			<div class="with-margins app-description-placeholder"></div>
-		</li>
+	<%= render :partial => 'rows', :collection => rows, :as => 'row' %>
 
-	<% 	row_index += 1
-		end %>
 </ul>
 
 
 <ul class="app-descriptions-archive">
-	<% @apps.each do |app| %>
-		<li id="<%= transform_image_name_to_id(app.image_src)%>">
-			<div class="grid-unit app-description-column">
-				<%= app.description %>
-			</div>
-			<div class="grid-unit app-description-column">
-				<%= app.second_description %>
-			</div>
-		</li>
-	<% end %>
+
+	<%= render :partial => 'app_description_archive_row', :collection => @apps, :as => 'app' %>
+	
 </ul>
 
 <script>

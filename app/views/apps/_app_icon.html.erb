@@ -1,0 +1,6 @@
+<div class="grid-unit apps-matrix-column ">
+	<%= link_to(app_path(app), :class=>"app-link row-#{row_counter}") do %>
+		<%= image_tag(app.image_src, {:class => "app-icon"}) %>
+	<% end %>					
+	<p><%= app.name %></p>
+</div>

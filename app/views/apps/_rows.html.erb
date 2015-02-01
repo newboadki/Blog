@@ -1,0 +1,8 @@
+<li class="row with-margins apps-row-top-padding">
+	<%= render :partial => 'app_icon', :collection => row, :as => 'app', :locals=>{:row_counter =>row_counter} %>
+</li>
+
+<li class="row app-description-row-hidden expansion-row row-<%= row_counter %>">
+	<div class="arrow-up row-<%= row_counter %>"></div>
+	<div class="with-margins app-description-placeholder"></div>
+</li>
