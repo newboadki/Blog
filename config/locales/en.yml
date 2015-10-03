@@ -22,17 +22,17 @@
 en:
   page_sections:
     home:
-      title: "What this is about"
-      about_this_page: "I am a software engineer and I live in London. Basketball player. Occasional runner. Avid reader. Nomad of the modern times, having worked in Norway, London and Cape Town, SA. Believer in the idea that better software is possible. </br>Currently I work writing software for iOS platforms, but the core of what fascinates me about software engineering is platform independent. My passion is to solve scalability and reusability problems, abstracting the concrete, simplifying the entangled."
+      title: "Round Software"
+      about_this_page: "Round Software is a company that offers consulting services to design, implement and improve new and existing projects. We believe in a user-centric experience that is based on solid architectural and engineering foundamentals."
       skills:
         studies:
-          title: "Computer Science"
-          desc: "I have a master degree in Computer Science from the University of Seville, Spain, where I specialised in software development. These studies focus a great deal on providing theorical knowledge and on learning how to break big problems into small pieces and how to develop pacience, which is crucial when solving complex tasks."
+          title: "Software engineering"
+          desc: "We believe that no great product can be created  and scaled without an engineering process to back it up. Software architecture brings sustainable and well thought through results."
         ios:
           title: "iOS Development"
-          desc: "iOS development has been the focus of my work in recent years, having done it for over four years now. I currently work as an iOS engineer for IG Index in London. I find that the expossure to Apple frameworks is a window to a not so common development approach these days, where they spend a lot of time in perfecting their products and APIs during long release cycles. This platform leads the way in many respects and has set the bar incredibly high in terms of what the user expects from software and that is remarkable."
+          desc: "We develop for iOS, Apple Watch and MAC OSX  platforms. We deliver beautiful user expeciences that get the job done leveraging the power of mobile devices."
         web:
           title: "Web Development"
-          desc: "My beginnings as a programmers revolved around web development. I have worked with several languages and frameworks including Java, Google Web Toolkit and Ruby on Rails, which is what this web site has been writen in. I watch with interest how different technologies evolve and influence others. The progression of tools and languages has been remarkable during the past 10 years. It really inspires us about what we’ll do next."
+          desc: "We live in an interconnected world. Mobile and web blend into one homogeneus solution. Our services make use of a combination of web and mobile technilogies to deliver the results that matter."
     blog:
       title: "Web Log"

@@ -19,6 +19,16 @@ function applyBlackTheme() {
 
 $(document).ready(function() {
 
+
+	var home = document.querySelector('.home');
+	home.classList.remove('hidden');
+
+	var apps = document.querySelector('.apps');
+	apps.classList.remove('hidden');
+
+	var blog = document.querySelector('.blog');
+	blog.classList.remove('hidden');
+
 	/* Animations to fade out and in again new content when ready. */
 	$('.main-menu-link').each(function() {
 		var linkElement = $(this);
