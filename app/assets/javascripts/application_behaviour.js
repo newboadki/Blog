@@ -19,26 +19,6 @@ function applyBlackTheme() {
 
 $(document).ready(function() {
 
-
-	var home = document.querySelector('.home');
-	home.classList.remove('hidden');
-
-	var apps = document.querySelector('.apps');
-	apps.classList.remove('hidden');
-
-	var blog = document.querySelector('.blog');
-	blog.classList.remove('hidden');
-
-
-	var engineering = document.querySelector('.engineering');	
-	engineering.classList.remove('section-hidden-left');
-
-	var web_dev = document.querySelector('.web-dev');
-	web_dev.classList.remove('section-hidden-right');
-	var ios_dev = document.querySelector('.ios-dev');
-	ios_dev.classList.remove('section-hidden-middle');
-
-
 	/* Animations to fade out and in again new content when ready. */
 	$('.main-menu-link').each(function() {
 		var linkElement = $(this);
