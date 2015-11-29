@@ -23,16 +23,16 @@ en:
   page_sections:
     home:
       title: "Round Software"
-      about_this_page: "Round Software is a company that offers consulting services to design, implement and improve new and existing projects. We believe in a user-centric experience that is based on solid architectural and engineering foundamentals."
+      about_this_page: "Round Software is a company that offers consulting services to design, implement and improve new and existing projects. We believe in a user-centric experience that is based on solid architectural and engineering fundamentals."
       skills:
         studies:
-          title: "Software engineering"
+          title: "Engineering"
           desc: "We believe that no great product can be created  and scaled without an engineering process to back it up. Software architecture brings sustainable and well thought through results."
         ios:
           title: "iOS Development"
           desc: "We develop for iOS, Apple Watch and MAC OSX  platforms. We deliver beautiful user expeciences that get the job done leveraging the power of mobile devices."
         web:
           title: "Web Development"
-          desc: "We live in an interconnected world. Mobile and web blend into one homogeneus solution. Our services make use of a combination of web and mobile technilogies to deliver the results that matter."
+          desc: "We live in an interconnected world. Mobile and web blend into one homogeneus solution. Our services make use of a combination of web and mobile technologies to deliver the results that matter."
     blog:
       title: "Web Log"
