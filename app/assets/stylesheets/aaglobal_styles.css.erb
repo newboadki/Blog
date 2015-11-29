@@ -439,6 +439,78 @@ code {
 	font-size: 1.0em;
 }
 
+/* MENU LINKS ANIMATIONS*/
+.appear
+{	
+	color: #EEE;
+	display: inline-block;
+    -webkit-transition: -webkit-transform 1.5s ease,
+                        opacity 1.0s ease-in;     
+    -moz-transition: transform 1.5s ease,
+                     opacity 1.0s ease-in;        
+}
+
+.ndelay
+{
+  transition-delay:2s;
+}
+
+.nndelay
+{
+  transition-delay:2.2s;
+}
+
+.nnndelay
+{
+  transition-delay:2.4s;
+}
+
+
+.hidden 
+{
+	-webkit-transform: translateY(-100px);
+	-moz-transform: translateY(-100px);
+	opacity: 0;    
+}
+
+
+
+/* SKILLS ANIMATIONS*/
+
+.section-appear
+{		
+	display: inline-block;
+    -webkit-transition: -webkit-transform 1.5s ease,
+                        opacity 1.0s ease-in;     
+    -moz-transition: transform 1.5s ease,
+                     opacity 1.0s ease-in;        
+}
+
+.section-hidden-left
+{
+	-webkit-transform: translateX(-100px);
+	-moz-transform: translateX(-100px);
+	opacity: 0;    
+}
+
+.section-hidden-right
+{
+	-webkit-transform: translateX(100px);
+	-moz-transform: translateX(100px);
+	opacity: 0;    
+}
+
+.section-hidden-middle
+{
+	opacity: 0;    
+}
+
+
+.section-ndelay
+{
+  transition-delay:1s;
+}
+
 
 
 @font-face {
