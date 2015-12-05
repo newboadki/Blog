@@ -442,23 +442,25 @@ code {
 @-webkit-keyframes slide-in {
      0% {
        -webkit-transform: translateY(-50px);  
+       -moz-transform: translateY(-50px);  
        opacity: 0;     
      }
 
      100% {
-       -webkit-transform: translateY(0px);       
+       -webkit-transform: translateY(0px); 
+       -moz-transform: translateY(0px);  
        opacity: 1;
      }
 }
 
 .ndelay {
-   -webkit-animation-delay: 1s !important;    
-   opacity: 0;
+   -webkit-animation-delay: 1s !important;
+   -moz-animation-delay: 1s !important;
  }
 
 .nndelay {
-   -webkit-animation-delay: 1.4s !important;    
-   opacity: 0;
+   -webkit-animation-delay: 1.4s !important;
+   -moz-animation-delay: 1.4s !important;  
  }
 
 .animatable {
