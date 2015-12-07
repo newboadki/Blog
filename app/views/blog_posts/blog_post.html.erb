@@ -5,16 +5,16 @@
 </div>
 
 <ul class="row post-list">
-			<li class="row with-margins borja">
-				<div class="page-column">
-					<div class="grid-unit main-column">
-						<h3 class="post-title"><%= @blog_post.title %></h3>
-						<p class="post-date"><%= @blog_post.created_at%> by <%= @blog_post.user.name %></h3>
-						<div class="white-rounded-frame post-image-container">
-							<%= image_tag(@blog_post.image_src, {:class => "post-image"}) %>
-						</div>
-						<p class="post-body"><%= raw(@blog_post.body) %></p>
-					</div>
+	<li class="row with-margins borja">
+		<div class="page-column">
+			<div class="grid-unit main-column">
+				<h3 class="post-title"><%= @blog_post.title %></h3>
+				<p class="post-date"><%= @blog_post.created_at%> by <%= @blog_post.user.name %></h3>
+				<div class="white-rounded-frame post-image-container">
+					<%= image_tag(@blog_post.image_src, {:class => "post-image"}) %>
 				</div>
-			</li>
+				<p class="post-body"><%= raw(@blog_post.body) %></p>
+			</div>
+		</div>
+	</li>
 </ul>	
