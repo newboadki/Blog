@@ -40,11 +40,15 @@ pre .objc-clojure .objc-title, pre .objc-clojure .objc-built_in {
     color: #00a
 }
 
+pre .objc-user_def {
+    color: #408394
+}
+
 pre .objc-class .objc-title, pre .objc-haskell .objc-type, pre .objc-smalltalk .objc-class,
 pre .objc-javadoctag, pre .objc-yardoctag, pre .objc-phpdoc, pre .objc-typename,
 pre .objc-tag .objc-attribute, pre .objc-doctype, pre .objc-class .objc-id,
 pre .objc-built_in, pre .objc-setting, pre .objc-params, pre .objc-clojure .objc-attribute {
-    color: #c56021
+    color: #7c17b2
 }
 
 pre .objc-variable {
