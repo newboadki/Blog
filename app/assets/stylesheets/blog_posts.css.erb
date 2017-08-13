@@ -1,7 +1,7 @@
-/* 
+/*
  Place all the styles related to the blog_posts controller here.
  They will automatically be included in application.css.
- You can use Sass (SCSS) here: http://sass-lang.com/ 
+ You can use Sass (SCSS) here: http://sass-lang.com/
 */
 
 .post-image {
@@ -21,11 +21,25 @@
 	margin-top: 20px;
 }
 
+.post-title, .post-title-list {
+	font-size: 1.2em;
+	padding-top: 0;
+	font-family: "HelveticaNeue-Light";
+}
+
 .post-title {
 	font-size: 1.5em;
 	font-weight: bold;
-	padding-top: 0;
-	font-family: "HelveticaNeue-Light";
+}
+
+.post-title-list, a {
+	text-decoration: none;
+	color: #333;
+}
+
+.post-title-list a:hover {
+	text-decoration: none;
+	color: #0088CC;
 }
 
 .post-section-title {
@@ -60,7 +74,7 @@
 }
 
 .blog_post_parragraph {
-	padding-top: 30px;	
+	padding-top: 30px;
 	font-family: "Lusitana";
 }
 
@@ -80,7 +94,7 @@
 	margin-right:auto;
 	height:299px;
 	width:527px;
-	background: url( <%= asset_path 'overall_diagram.png' %>);	
+	background: url( <%= asset_path 'overall_diagram.png' %>);
 }
 
 .view-controller-hierarchy {
@@ -89,7 +103,7 @@
 	margin-top: 30px;
 	height:316px;
 	width:686px;
-	background: url( <%= asset_path 'view_controller_hierarhcy.png' %>);	
+	background: url( <%= asset_path 'view_controller_hierarhcy.png' %>);
 }
 
 .pie-chart-responsibilities {
@@ -98,7 +112,7 @@
 	margin-top: 30px;
 	height:159px;
 	width:456px;
-	background: url( <%= asset_path 'pie_chart_responsibilities.png' %>);	
+	background: url( <%= asset_path 'pie_chart_responsibilities.png' %>);
 }
 
 .pie-chart-api {
@@ -107,7 +121,7 @@
 	margin-top: 30px;
 	height:346px;
 	width:569px;
-	background: url( <%= asset_path 'pie_chart_api.png' %>);	
+	background: url( <%= asset_path 'pie_chart_api.png' %>);
 }
 
 .toroidal_path {
@@ -116,7 +130,7 @@
 	margin-top: 30px;
 	height:168px;
 	width:246px;
-	background: url( <%= asset_path 'toroidal_bezier_path.png' %>);	
+	background: url( <%= asset_path 'toroidal_bezier_path.png' %>);
 }
 
 .pie-chart-example-1 {
@@ -125,7 +139,7 @@
 	margin-top: 30px;
 	height:418px;
 	width:380px;
-	background: url( <%= asset_path 'pie-chart-example-1.png' %>);	
+	background: url( <%= asset_path 'pie-chart-example-1.png' %>);
 }
 
 .pie-chart-example-2 {
@@ -134,7 +148,7 @@
 	margin-top: 30px;
 	height:572px;
 	width:534px;
-	background: url( <%= asset_path 'pie-chart-example-2.png' %>);	
+	background: url( <%= asset_path 'pie-chart-example-2.png' %>);
 }
 
 
@@ -145,32 +159,32 @@
 	margin-top: 30px;
 	height:217px;
 	width:787px;
-	background: url( <%= asset_path 'cell_diagram.png' %>);	
+	background: url( <%= asset_path 'cell_diagram.png' %>);
 }
 
 .cell-event-hierarchy {
 	margin-left:auto;
-	margin-right:auto;	
+	margin-right:auto;
 	margin-top: 30px;
 	height:147px;
 	width:612px;
-	background: url( <%= asset_path 'cell_event_hierarchy.png' %>);	
+	background: url( <%= asset_path 'cell_event_hierarchy.png' %>);
 }
 
 .cell-data-source-protocol {
 	margin-left:auto;
-	margin-right:auto;	
+	margin-right:auto;
 	margin-top: 30px;
 	height:331px;
 	width:661px;
-	background: url( <%= asset_path 'protocol.png' %>);	
+	background: url( <%= asset_path 'protocol.png' %>);
 }
 
 .expenses-form {
 	margin-left:auto;
-	margin-right:auto;	
+	margin-right:auto;
 	margin-top: 30px;
 	height:354px;
 	width:632px;
-	background: url( <%= asset_path 'Form.png' %>);	
+	background: url( <%= asset_path 'Form.png' %>);
 }

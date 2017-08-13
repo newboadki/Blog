@@ -15,13 +15,8 @@ describe "blog_posts/index" do
     render
 
     rendered.should contain("Beginning")
-    rendered.should contain("A new day")
-
     rendered.should contain("Bye Day")
-    rendered.should contain("The day ends")
-
     rendered.should contain("Hey")
-    rendered.should contain("Super cool")
   end
 
 end
