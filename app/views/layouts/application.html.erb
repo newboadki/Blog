@@ -3,10 +3,10 @@
 	<head>
 	<meta charset="UTF-8">
 	  <title>ZeroOne</title>
-	  <%= stylesheet_link_tag    "application", media: "all"%>	  
+	  <%= stylesheet_link_tag    "application", media: "all"%>
 	  <%= javascript_include_tag "application"%>
 	  <link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
-	  <%= csrf_meta_tags %>	  
+	  <%= csrf_meta_tags %>
 	</head>
 
 	<body>
@@ -20,29 +20,29 @@
 		  ga('send', 'pageview');
 
 		</script>
-		
+
 		<div id="page">
-			
+
 			<% if current_user%>
 				<%= link_to "Sign out", destroy_user_session_path(current_user), :method => :delete %><br />
 			<% end %>
 
 			<%= render("partial_templates/header.html.erb") %>
-			
+
 			<%= render("partial_templates/section_title.html.erb") %>
-			
+
 		    <p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>
-			
-			
-			<div id="content-area" class="white-theme">
+
+
+			<div id="content-area">
 				<div class="loading-hud"><%= image_tag("spinner.gif") %></div>
-				<div id="content" class="content">				
-				 	<%= yield %> 
+				<div id="content" class="content">
+				 	<%= yield %>
 				</div>
 			</div>
 			<%= render("partial_templates/footer.html.erb") %>
-			
+
 		</div>
 	</body>
 </html>

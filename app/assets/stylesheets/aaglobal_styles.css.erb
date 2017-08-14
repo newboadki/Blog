@@ -60,7 +60,6 @@ time, mark, audio, video {
   width: 100%;
 }
 
-
 .row:after {
   content: " ";
   display: block;
@@ -88,19 +87,12 @@ time, mark, audio, video {
 }
 
 .page-title-column {
-/*	width: 95%;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-*/
-
 }
 
 .page-column {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	/*background-color: #ff0;*/
-
 }
 
 
@@ -154,6 +146,14 @@ time, mark, audio, video {
 	font-family: "HelveticaNeue-Light";
 }
 
+.header h1.title {
+	color: #555;
+}
+
+
+.header p.subtitle {
+	color: #777;
+}
 
 #content-area {
 	margin-left:auto;
@@ -164,6 +164,9 @@ time, mark, audio, video {
 	line-height: 1.4em;
 	position: relative;
 	padding-bottom: 45px;
+  background: rgb(255, 255, 255) url(<%= asset_path 'noise.png' %>);
+  -webkit-transition: color 1.0s ease;
+  -webkit-transition: background 1.0s ease;
 }
 
 .footer
@@ -186,7 +189,6 @@ time, mark, audio, video {
 	margin-bottom: 50px;
 	width: 20%;
 }
-
 
 h1.title
 {
@@ -227,6 +229,10 @@ p.subtitle
 	height: 100px;
 	font-family: "HelveticaNeue-Light";
 	font-weight: bold;
+  color: #111;
+  background: rgb(255, 255, 255) url( <%= asset_path 'circles_menu_bg_template.svg' %>);
+  -webkit-transition: color 1.0s ease;
+  -webkit-transition: background 1.0s ease;
 }
 
 .section-title.is-loading
@@ -244,12 +250,10 @@ p.subtitle
 	/*padding-bottom: 15px;		*/
 }
 
-
 .horizontal_menu ol li
 {
  	display: inline;
 }
-
 
 .horizontal_menu ol li a
 {
@@ -259,7 +263,6 @@ p.subtitle
 	font-family: "HelveticaNeue";
 	opacity: 0; /* Because the CSS animations show the links in a fade-in fashion. Search for keyFrames */
 }
-
 
 .horizontal_menu a:hover
 {
@@ -286,7 +289,6 @@ p.subtitle
 	padding-top:25px;
 }
 
-
 .portrait {
 	width: 90px;
 	height: 90px;
@@ -305,7 +307,6 @@ p.subtitle
 
 }
 
-
 .footer-section-title {
 	padding-bottom: 10px;
 	font-size: 1.3em;
@@ -313,12 +314,10 @@ p.subtitle
 	color: #999;
 }
 
-
 .about-spain {
 	text-align: center;
 	font-family: 'Euphoria Script', cursive;
 }
-
 
 .matrix-footer-big-column {
 	width: 40%;
@@ -349,68 +348,6 @@ span.bold-text {
 /* Code formatting*/
 code {
 	font-size: 0.7em;
-}
-
-
-
-.white-theme {
-	color: #111;
-	background:#fff;
-	-webkit-transition: color 1.0s ease-out;
-	-webkit-transition: background 1.0s ease-out;
-
-}
-
-.black-theme {
-	color: #eee;
-	background:#000;
-	-webkit-transition: color 1.0s ease;
-	-webkit-transition: background 1.0s ease;
-}
-
-#content-area.white-theme {
-	background: rgb(255, 255, 255) url(<%= asset_path 'noise.png' %>);
-	-webkit-transition: color 1.0s ease;
-	-webkit-transition: background 1.0s ease;
-
-}
-
-#content-area.black-theme {
-	background: rgb(0, 0, 0) url(<%= asset_path 'noise.png' %>);
-	-webkit-transition: color 1.0s ease;
-	-webkit-transition: background 1.0s ease;
-
-}
-
-.white-theme.section-title {
-	color: #111;
-	background: rgb(255, 255, 255) url( <%= asset_path 'circles_menu_bg_template.svg' %>);
-	-webkit-transition: color 1.0s ease;
-	-webkit-transition: background 1.0s ease;
-}
-
-.black-theme.section-title {
-	color: #aaa;
-	background: rgb(0, 0, 0) url( <%= asset_path 'circles_menu_bg_template.svg' %>);
-	-webkit-transition: color 1.0s ease;
-	-webkit-transition: background 1.0s ease;
-}
-
-
-.header.white-theme h1.title {
-	color: #555;
-}
-
-.header.black-theme h1.title {
-	color: #aaa;
-}
-
-.header.white-theme p.subtitle {
-	color: #777;
-}
-
-.header.black-theme p.subtitle {
-	color: #aaa;
 }
 
 .resume-company-section {
