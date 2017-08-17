@@ -23,6 +23,7 @@ time, mark, audio, video {
 }
 
 
+
 /* ========= GENERIC ================================================ */
 
 .with-margins
@@ -33,7 +34,6 @@ time, mark, audio, video {
 }
 
 .loading-hud {
-
 	left:50%;
 	top:150px;
 	margin-right: auto;
@@ -44,7 +44,10 @@ time, mark, audio, video {
 	position: absolute;
 }
 
+
+
 /* ========= GRID LAYOUT ======================================== */
+
 .page
 {
 	width: 100%;
@@ -76,47 +79,15 @@ time, mark, audio, video {
 	padding-bottom: 80px;
 }
 
-.full-column {
-	width: 100%;
-}
-
-.centered-column {
-	width: 25%;
-	margin-left: 37.5%;
-	margin-right: 37.5%;
-}
-
-.page-title-column {
-}
-
-.page-column {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-.main-column {
-	width: 100%;
-}
-
-.side-column {
-	width: 0%;
-}
-
 .matrix-column {
 	width: 20%;
 }
 
-/* This should be in apps.css but for some reason it's not found there, despite the fact that other styles in tht file are been read.*/
+/* This should be in apps.css but for some reason it's not found there,
+despite the fact that other styles in tht file are been read.*/
 .apps-matrix-column {
 	width: 25%;
 	text-align: center;
-}
-
-.main .main-column,
-.main .side-column {
-  background: #eec;
 }
 
 .half-column
@@ -124,17 +95,8 @@ time, mark, audio, video {
 	width: 50%;
 }
 
-.white-rounded-frame {
 
-}
-
-#logo
-{
-	display: inline;
-	margin-right: 0.3em;
-	vertical-align: baseline;
-	width:15%;
-}
+/* ========= PAGE LAYOUT ================================================ */
 
 .header
 {
@@ -149,20 +111,16 @@ time, mark, audio, video {
   width:65%;
 }
 
-.with-clear-background {
-  background-color: #fff;
-}
-
-.with-colored-background {
-    background: #fabf18 url( <%= asset_path 'noise.png' %>);
-}
-
 .header p.subtitle {
   font-style: italic;
   font-size: 1.0em;
 	color: #fc5f53;
   font-family: "Palatino";
   padding-top: 5px;
+}
+
+.header-margin {
+  width: 25%;
 }
 
 #content-area {
@@ -191,32 +149,6 @@ time, mark, audio, video {
   height: 300px;
 }
 
-
-
-.footer-column {
-	text-align: left;
-	margin-top: 50px;
-	width: 25%;
-}
-
-.footer-column-4 {
-	text-align: left;
-	margin-top: 40px;
-	margin-bottom: 50px;
-	width: 20%;
-}
-
-
-
-p.subtitle
-{
-
-	/*padding-bottom: 25px;*/
-	font-size: 1.2em;
-	font-style: oblique;
-	font-family: 'Palatino', cursive;
-}
-
 .header-title-padding {
   padding-top: 19px;
 }
@@ -238,13 +170,6 @@ p.subtitle
   -webkit-transition: background 1.0s ease;
 }
 
-.section-title.is-loading
-{
-	font-weight: normal;
-	font-size: 0.7em;
-}
-
-
 .horizontal_menu {
   padding-top: 35px;
 }
@@ -256,11 +181,6 @@ p.subtitle
   margin-left: auto;
   margin-right: auto;
 }
-
-.third-spaced-column {
-  width: 33%;
-}
-
 
 .horizontal_menu ol li
 {
@@ -289,9 +209,6 @@ p.subtitle
 	color: #eee;
 }
 
-
-/* Blog Posts*/
-
 /* HOME */
 
 .page-title {
@@ -300,53 +217,6 @@ p.subtitle
 	font-family: "HelveticaNeue";
 	font-weight: bold;
 	padding-top:100px;
-}
-
-.portrait {
-	width: 90px;
-	height: 90px;
-	float: left;
-	margin-right: 20px;
-	border-radius: 100%;
-	box-shadow: 1px 1px 2px #222;
-
-}
-
-#spain_image {
-}
-
-.about-me {
-	padding-top: 5px;
-
-}
-
-.footer-section-title {
-	padding-bottom: 10px;
-	font-size: 1.3em;
-	font-weight: bold;
-	color: #999;
-}
-
-.about-spain {
-	text-align: center;
-	font-family: 'Euphoria Script', cursive;
-}
-
-.matrix-footer-big-column {
-	width: 40%;
-}
-
-.matrix-footer-small-column {
-	width: 20%;
-	padding-top: 30px;
-}
-
-.centered-element {
-	margin-left:55px;
-}
-
-.locale-flag {
-	width:1%;
 }
 
 .locales {
@@ -358,46 +228,21 @@ span.bold-text {
 }
 
 
-/* Code formatting*/
+
+/* ========= CODE FORMATTING ================================================ */
+
 code {
 	font-size: 0.7em;
 }
 
-.header-margin {
-  width: 25%;
+
+
+/* ========= THEMING ================================================ */
+
+.with-clear-background {
+  background-color: #fff;
 }
 
-
-
-.resume-company-section {
-	padding-top:100px;
-	font-family:helvetica;
-	text-align: center;
-}
-
-.resume-company-name {
-	font-size: 1.5em;
-}
-
-.resume-company-location {
-	font-size: 0.5em;
-}
-
-.resume-job-description {
-	font-size: 1.0em;
-}
-
-
-.left-aligned-text {
-  text-align: left;
-}
-
-.right-aligned-text {
-  text-align: right;
-}
-
-.title-of-section {
-  padding-top: 65px;
-  font-weight: bold;
-  font-size: 4em;
+.with-colored-background {
+    background: #fabf18 url( <%= asset_path 'noise.png' %>);
 }
