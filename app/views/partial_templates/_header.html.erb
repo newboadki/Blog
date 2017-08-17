@@ -1,9 +1,11 @@
-<div id="header" class="header row">
+<div id="header" class="row <%= background_color_css_selector_for @theme %>">
 
-	<%= render("partial_templates/main_menu.html.erb") %>
-
-	<h1 class="title"><%= image_tag("round_software_logo.png", {:id => 'logo'}) %></h1>
-
-	<p class="subtitle"></p>
+	<div class="row with-margins" >
+		<div class="grid-unit header-column header <%=  background_color_css_selector_for@theme %>">
+			<div class="header-title-padding"><span class="bold-text">ROUND</span>&nbsp;<span>SOFTWARE</span></div>
+			<p class="subtitle">Designed and developed by Borja Arias Drake</p>
+		</div>
+		<div class="grid-unit header-margin header-column <%= background_color_css_selector_for @theme %>"><%= render("partial_templates/main_menu.html.erb") %></div>
+	</div>
 
 </div>

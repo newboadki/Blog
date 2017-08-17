@@ -1,6 +1,10 @@
-<div id="main-menu" class="horizontal_menu">
-	<ol>
-		<li><%= link_to('Home', home_path, {:class => 'home main-menu-link animatable menu-item-ndelay'}) %></li>
-		<li><%= link_to('Blog', blog_posts_path, {:class => 'blog main-menu-link animatable menu-item-nndelay'}) %></li>
-	</ol>
+<div class="row horizontal_menu">
+	<div class="grid-unit half-column">&nbsp;</div>
+	<div class="grid-unit half-column">
+		<ol>
+			<li><%= link_to('Home', home_path, {:class => 'main-menu-link home-link'}) %></li>
+			<li>|</li>
+			<li><%= link_to('Articles', blog_posts_path, {:class => 'main-menu-link articles-link'}) %></li>
+		</ol>
+	</div>	
 </div>

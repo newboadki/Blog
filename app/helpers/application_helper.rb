@@ -15,4 +15,20 @@ module ApplicationHelper
     rows
   end
 
+  # some view elements with query this method to style certain elements.
+  def background_color_css_selector_for(theme)
+    return "with-clear-background" if theme == :home_page_style
+    return "with-colored-background" if theme == :articles_page_style
+    return ""
+  end
+
+  # But because in the same view a set of elements need to have a different css property
+  # we complement the use of these two methods
+  def complementary_background_color_css_selector_for(theme)
+    return "with-colored-background" if theme == :home_page_style
+    return "with-clear-background" if theme == :articles_page_style
+    return ""
+  end
+
+
 end

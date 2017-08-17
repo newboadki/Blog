@@ -3,7 +3,7 @@
 		<li class="row with-margins post-top-padding">
 			<div class="page-column">
 				<div class="grid-unit main-column">
-					<h3 class="post-title-list"><%= link_to post.title, blog_post_path(post) %></h3>
+					<h3 class="post-title-list"><%= link_to post.title, blog_post_path(post), {:class => 'main-menu-link home-link'} %></h3>
 					<p class="post-date"><%= post.created_at%> by <%= post.user.name %></h3>
 				</div>
 			</div>

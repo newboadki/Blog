@@ -2,15 +2,16 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  
+
   # Filters
   before_action :set_i18n_locale_from_params
-  
+
   # Handling exceptions
-  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found 
-  
-  
-  
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
+  HOME_PAGE_THEME = :home_page_style
+  ARTICLES_PAGE_THEME = :articles_page_style
+
   protected
 
   def set_i18n_locale_from_params
@@ -19,7 +20,7 @@ class ApplicationController < ActionController::Base
   			I18n.locale = params[:locale]
   		else
   			flash.now[:notice] = "#{params[:locale]} translation not available"
-  			logger.error flash.now[:notice]  			
+  			logger.error flash.now[:notice]
   		end
   	end
   end
