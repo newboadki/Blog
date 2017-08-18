@@ -9,7 +9,7 @@ class BlogPostsController < ApplicationController
   end
 
   def show
-    @section_title = "Articles"
+    @section_title = ""
     @blog_post = BlogPost.where(parameterised_title: params[:id]).first!
     respond_to_replacing_content_with_ajax('blog_posts', 'show', @section_title)
   end

@@ -33,6 +33,12 @@ time, mark, audio, video {
 	width: 65%;
 }
 
+.blog-post-with-margins {
+  margin-left: auto;
+	margin-right: auto;
+	width: 65%;
+}
+
 .loading-hud {
 	left:50%;
 	top:150px;
@@ -111,9 +117,9 @@ despite the fact that other styles in tht file are been read.*/
   width:65%;
 }
 
-.header p.subtitle {
+.header div.subtitle {
   font-style: italic;
-  font-size: 1.0vw;
+  font-size: 1.0em;
   font-family: "Palatino";
   padding-top: 5px;
   color: #57b6ec;
@@ -214,9 +220,9 @@ despite the fact that other styles in tht file are been read.*/
 }
 
 .page-title {
-	font-size: 3em;
+
 	text-align: center;
-	font-family: "Palatino", "Georgia", "serif";
+	font: normal 3em Palatino, Georgia, serif;
 	font-weight: bold;
 	padding-top:100px;
 }
@@ -247,4 +253,35 @@ code {
 
 .with-colored-background {
     background: #ffffff;
+}
+
+/* ========= RESPONSIVE DESIGN ================================================ */
+@media only screen and (max-width: 900px) {
+  .grid-unit.resizable {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: block;
+    float: none;
+    padding-right: 1.5em;
+    width: 100%;
+  }
+
+  .row-top-margin {
+    padding-top: 100px;
+  }
+
+  .header div.subtitle {
+    display: none;
+  }
+
+  .header-title-padding {
+    padding-top: 35px;
+  }
+
+  .with-margins {
+    margin-left: auto;
+  	margin-right: auto;
+  	width: 90%;
+  }
+
 }
