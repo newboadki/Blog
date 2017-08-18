@@ -5,7 +5,6 @@ function setClearTheme() {
 	setClearThemeForElement($('.section-title'));
 	setClearThemeForElement($('#content-area'));
 	setClearThemeForElement($('.footer'));
-
 }
 
 function setColoredTheme() {
@@ -37,12 +36,6 @@ $(document).ready(function() {
 
 				var link = $(this).attr('href');
 				var link_url = $(this).attr('href') + ".js"; // So rails interprets this as Ajax.
-
-				if (linkElement.hasClass('home-link')) {
-					setColoredTheme(link);
-				} else if (linkElement.hasClass('articles-link')) {
-					setClearTheme(link);
-				}
 
 				// Fade out the section title
 				$('.section-title h2').animate({opacity: 0.0}, 200,
@@ -77,37 +70,6 @@ $(document).ready(function() {
 		     });
 	 });
 });
-
-
-$(document).on( "click", ".post-title-list a", function(event) {
-	// Make ajax request when complete
-	event.preventDefault();
-
-	var link = $(this).attr('href');
-	var link_url = $(this).attr('href') + ".js"; // So rails interprets this as Ajax.
-
-
-	setClearTheme();
-
-	$.ajax({
-		url: link_url,
-		beforeSend: function ( xhr ) {
-				$('.loading-hud').css('display', 'block');
-			}
-	}).done(function ( data ) {
-		// Add callback handlers for articles links, they did not have handlers
-		// attached when document loaded most likely, unless user loaded that page using the URL.
-
-		// Show the content back
-		var articlesLink = $('.articles-link').attr('href');
-		history.pushState(null, "", articlesLink);
-		$('.loading-hud').css('display', 'none');
-		$('#content').animate({opacity: 1.0}, 400);
-		$('.section-title').removeClass('is-loading');
-	});
-
-});
-
 
 /* Alternative for using link_to remote => true to trigger ajax. Downside we lose the capability to control animations
 as this happens in the beforeSend, but the animation itself runs in another thread, therefore the actual ajax request is sent

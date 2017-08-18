@@ -32,8 +32,8 @@
 			<%= render("partial_templates/section_title.html.erb") %>
 
 		  <p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
 
+			<p class="alert"><%= alert %></p>
 
 			<div id="content-area" class="<%= complementary_background_color_css_selector_for @theme %>">
 				<div class="loading-hud"><%= image_tag("spinner.gif") %></div>
@@ -41,8 +41,8 @@
 				 	<%= yield %>
 				</div>
 			</div>
-			<%= render("partial_templates/footer.html.erb") %>
 
+			<%= render("partial_templates/footer.html.erb") %>
 		</div>
 	</body>
 </html>

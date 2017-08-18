@@ -104,7 +104,7 @@ despite the fact that other styles in tht file are been read.*/
 	margin-right:auto;
 	width: 100%;
 	background-color: #fff;
-	font-family: "HelveticaNeue-Light";
+	font-family: "HelveticaNeue-Light", "Helvetica", "Verdana";
   height: 70px;
   margin-bottom: 0;
   margin-top: 0;
@@ -113,20 +113,24 @@ despite the fact that other styles in tht file are been read.*/
 
 .header p.subtitle {
   font-style: italic;
-  font-size: 1.0em;
-	color: #fc5f53;
+  font-size: 1.0vw;
   font-family: "Palatino";
   padding-top: 5px;
+  color: #57b6ec;
 }
 
 .header-margin {
   width: 25%;
 }
 
+.header-column {
+	width: 50%;
+}
+
 #content-area {
 	margin-left:auto;
 	margin-right:auto;
-	font-family: "HelveticaNeue-Light";
+	font-family: "HelveticaNeue-Light", "Helvetica", "Verdana";
 	text-align: left;
 	font-size: 1.2em;
 	line-height: 1.4em;
@@ -138,13 +142,13 @@ despite the fact that other styles in tht file are been read.*/
 
 .cover-space {
   height: 5px;
-  background: rgb(2, 2, 2);
+  background: #1a4e83;
 }
 
 .footer
 {
 	color: #777;
-	font-family: "HelveticaNeue-Light";
+	font-family: "HelveticaNeue-Light", "Helvetica", "Verdana";
 	padding-top: 65px;
   height: 300px;
 }
@@ -163,7 +167,7 @@ despite the fact that other styles in tht file are been read.*/
 	margin-left:auto;
 	margin-right:auto;
 	margin-top: 0;
-	font-family: "HelveticaNeue-Light";
+	font-family: "HelveticaNeue-Light", "Helvetica", "Verdana";
 	font-weight: bold;
   color: #111;
   -webkit-transition: color 1.0s ease;
@@ -195,26 +199,24 @@ despite the fact that other styles in tht file are been read.*/
 	text-decoration: none;
   display: block;
 	color: #222;
-	font-family: "HelveticaNeue";
+	font-family: "HelveticaNeue", "Helvetica", "Verdana";
   font-weight: bold;
+}
+
+.horizontal_menu ol li a:hover
+{
+	text-decoration: none;
+	color: #0088CC;
 }
 
 .row-top-margin {
   padding-top: 200px;
 }
 
-.horizontal_menu a:hover
-{
-	text-decoration: none;
-	color: #eee;
-}
-
-/* HOME */
-
 .page-title {
 	font-size: 3em;
 	text-align: center;
-	font-family: "HelveticaNeue";
+	font-family: "Palatino", "Georgia", "serif";
 	font-weight: bold;
 	padding-top:100px;
 }
@@ -240,9 +242,9 @@ code {
 /* ========= THEMING ================================================ */
 
 .with-clear-background {
-  background-color: #fff;
+  background: #fff url( <%= asset_path 'noise.png' %>);
 }
 
 .with-colored-background {
-    background: #fabf18 url( <%= asset_path 'noise.png' %>);
+    background: #ffffff;
 }

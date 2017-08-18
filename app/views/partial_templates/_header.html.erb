@@ -1,9 +1,9 @@
 <div id="header" class="row <%= background_color_css_selector_for @theme %>">
 
-	<div class="row with-margins" >
-		<div class="grid-unit header-column header <%=  background_color_css_selector_for@theme %>">
+	<div class="row with-margins">
+		<div class="grid-unit header-column header <%=  background_color_css_selector_for @theme %>">
 			<div class="header-title-padding"><span class="bold-text">ROUND</span>&nbsp;<span>SOFTWARE</span></div>
-			<p class="subtitle">Designed and developed by Borja Arias Drake</p>
+			<p class="subtitle <%= subtitle_color_css_selector_for @theme %>">Borja Arias Drake's website</p>
 		</div>
 		<div class="grid-unit header-margin header-column <%= background_color_css_selector_for @theme %>"><%= render("partial_templates/main_menu.html.erb") %></div>
 	</div>

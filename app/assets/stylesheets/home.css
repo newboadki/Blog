@@ -15,10 +15,9 @@
  }
 
  .cover-title {
-   font-size: 5em;
+   font-size: 6vw;
 	 line-height: 1em;
 	 font-weight: bold;
-   /*height: 100px;*/
  }
 
 .black-title {
@@ -26,13 +25,7 @@
 }
 
 .white-title {
-	color: #eee;
-}
-
-.skill-title {
-	font-size: 1.3em;
-	padding-top: 10px;
-	color: #444;
+	color: #57b6ec;
 }
 
 .skill-description {
@@ -40,10 +33,6 @@
 	text-align: center;
 	font-size: 0.9em;
 	color: #222;
-}
-
-.header-column {
-	width: 50%;
 }
 
 .skill-icon-image {
