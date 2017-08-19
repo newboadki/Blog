@@ -1,10 +1,9 @@
 <div class="row horizontal_menu">
-	<div class="grid-unit half-column">&nbsp;</div>
-	<div class="grid-unit half-column">
-		<ol>
-			<li><%= link_to('Home', home_path, {:class => 'main-menu-link home-link'}) %></li>
-			<li>|</li>
-			<li><%= link_to('Articles', blog_posts_path, {:class => 'main-menu-link articles-link'}) %></li>
-		</ol>
-	</div>
+		
+	<ol>
+		<li><%= link_to(t('page_sections.main_menu.home'), home_path, {:class => 'main-menu-link home-link'}) %></li>
+		<li>|</li>
+		<li><%= link_to(t('page_sections.main_menu.articles'), blog_posts_path, {:class => 'main-menu-link articles-link'}) %></li>
+	</ol>
+
 </div>

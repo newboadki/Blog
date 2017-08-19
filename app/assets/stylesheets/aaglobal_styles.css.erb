@@ -33,12 +33,6 @@ time, mark, audio, video {
 	width: 65%;
 }
 
-.blog-post-with-margins {
-  margin-left: auto;
-	margin-right: auto;
-	width: 65%;
-}
-
 .loading-hud {
 	left:50%;
 	top:150px;
@@ -96,10 +90,6 @@ despite the fact that other styles in tht file are been read.*/
 	text-align: center;
 }
 
-.half-column
-{
-	width: 50%;
-}
 
 
 /* ========= PAGE LAYOUT ================================================ */
@@ -122,7 +112,7 @@ despite the fact that other styles in tht file are been read.*/
   font-size: 1.0em;
   font-family: "Palatino";
   padding-top: 5px;
-  color: #57b6ec;
+  color: #1376c1;
 }
 
 .header-margin {
@@ -181,15 +171,15 @@ despite the fact that other styles in tht file are been read.*/
 }
 
 .horizontal_menu {
-  padding-top: 35px;
+  padding-top: 34px;
+  margin: 0 auto;
 }
 
 .horizontal_menu ol
 {
   display: table;
   list-style: none;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto; /* So that it aligns right */
 }
 
 .horizontal_menu ol li
@@ -220,7 +210,6 @@ despite the fact that other styles in tht file are been read.*/
 }
 
 .page-title {
-
 	text-align: center;
 	font: normal 3em Palatino, Georgia, serif;
 	font-weight: bold;
@@ -257,12 +246,13 @@ code {
 
 /* ========= RESPONSIVE DESIGN ================================================ */
 @media only screen and (max-width: 900px) {
+
   .grid-unit.resizable {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     display: block;
     float: none;
-    padding-right: 1.5em;
+    padding-right: 0em;
     width: 100%;
   }
 

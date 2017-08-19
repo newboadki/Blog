@@ -3,7 +3,7 @@ class BlogPostsController < ApplicationController
   before_action :set_theme
 
   def index
-    @section_title = "Articles" # Needs to be here in case the request is not AJAX
+    @section_title = t('page_sections.blog.title') # Needs to be here in case the request is not AJAX
     @posts = BlogPost.ordered_by_created_at('DESC');
     respond_to_replacing_content_with_ajax('blog_posts', 'index', @section_title)
   end

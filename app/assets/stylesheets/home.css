@@ -26,7 +26,7 @@
 }
 
 .white-title {
-	color: #57b6ec;
+	color: #1376c1;
 }
 
 .skill-description {
@@ -213,5 +213,11 @@
  	 line-height: 1em;
  	 font-weight: bold;
     text-align: center;
+  }
+
+  .skill-description {
+    text-align: justify;
+  	font-size: 0.9em;
+  	color: #222;
   }
 }
