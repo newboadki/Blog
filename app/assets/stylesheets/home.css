@@ -87,19 +87,6 @@
 
 
 
-.animatable {
-    display: inline-block;
-    -webkit-animation: 'slide-in' 700ms ease-out;
-    -webkit-animation-fill-mode: forwards;
-
-    /*mozilla firefox*/
-    animation-name:slide-in;
-    animation-duration:700ms;
-    animation-timing-function:ease-out;
-    animation-fill-mode:forwards;
-
-}
-
 @-webkit-keyframes slide-in-left {
      0% {
        -webkit-transform: translateX(-150px);
@@ -113,6 +100,19 @@
 }
 
 @-moz-keyframes slide-in-left {
+     0% {
+       transform: translateX(-150px);
+       opacity: 0;
+     }
+
+     100% {
+       transform: translateX(0px);
+       opacity: 1;
+     }
+}
+
+/* Internet Explorer */
+@keyframes slide-in-left {
      0% {
        transform: translateX(-150px);
        opacity: 0;
@@ -161,6 +161,19 @@
      }
 }
 
+/* Internet Explorer */
+@keyframes slide-in-right {
+     0% {
+       transform: translateX(150px);
+       opacity: 0;
+     }
+
+     100% {
+       transform: translateX(0px);
+       opacity: 1;
+     }
+}
+
 .animatable-from-right {
     display: inline-block;
     -webkit-animation: 'slide-in-right' 1.5s ease-out;
@@ -193,6 +206,18 @@
        opacity: 1;
      }
 }
+
+/* Internet Explorer */
+@keyframes slide-in-center {
+     0% {
+       opacity: 0;
+     }
+
+     100% {
+       opacity: 1;
+     }
+}
+
 
 .animatable-from-center {
     display: inline-block;
