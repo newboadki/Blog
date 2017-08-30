@@ -22,11 +22,11 @@
  }
 
 .black-title {
-	color: #222;
+	color: #3d3638;
 }
 
 .white-title {
-	color: #1376c1;
+	color: #3d3638;
 }
 
 .skill-description {
@@ -241,6 +241,7 @@
   }
 
   .skill-description {
+    padding-top: 20px;
     text-align: justify;
   	font-size: 0.9em;
   	color: #222;

@@ -26,6 +26,10 @@ time, mark, audio, video {
 
 /* ========= GENERIC ================================================ */
 
+body {
+  background: #fffef7 url( <%= asset_path 'noise.png' %>);
+}
+
 .with-margins
 {
 	margin-left: auto;
@@ -99,7 +103,7 @@ despite the fact that other styles in tht file are been read.*/
 	margin-left:auto;
 	margin-right:auto;
 	width: 100%;
-	background-color: #fff;
+	background-color: #3c3738;
 	font-family: "HelveticaNeue-Light", "Helvetica", "Verdana";
   height: 70px;
   margin-bottom: 0;
@@ -112,7 +116,7 @@ despite the fact that other styles in tht file are been read.*/
   font-size: 1.0em;
   font-family: "Palatino";
   padding-top: 5px;
-  color: #1376c1;
+  color: #e9b29b;
 }
 
 .header-margin {
@@ -131,14 +135,13 @@ despite the fact that other styles in tht file are been read.*/
 	font-size: 1.2em;
 	line-height: 1.4em;
 	position: relative;
-	padding-bottom: 45px;
   -webkit-transition: color 1.0s ease;
   -webkit-transition: background 1.0s ease;
 }
 
 .cover-space {
   height: 5px;
-  background: #1a4e83;
+  background: #3c3738;
 }
 
 .footer
@@ -146,11 +149,12 @@ despite the fact that other styles in tht file are been read.*/
 	color: #777;
 	font-family: "HelveticaNeue-Light", "Helvetica", "Verdana";
 	padding-top: 65px;
-  height: 5em;
+  height: 2em;
 }
 
 .header-title-padding {
   padding-top: 19px;
+  color: #fffacd;
 }
 
 /* Application Menu*/
@@ -165,7 +169,7 @@ despite the fact that other styles in tht file are been read.*/
 	margin-top: 0;
 	font-family: "HelveticaNeue-Light", "Helvetica", "Verdana";
 	font-weight: bold;
-  color: #111;
+  color: #3d3638;
   -webkit-transition: color 1.0s ease;
   -webkit-transition: background 1.0s ease;
 }
@@ -173,6 +177,7 @@ despite the fact that other styles in tht file are been read.*/
 .horizontal_menu {
   padding-top: 34px;
   margin: 0 auto;
+  color: #fffacd;
 }
 
 .horizontal_menu ol
@@ -194,7 +199,7 @@ despite the fact that other styles in tht file are been read.*/
 {
 	text-decoration: none;
   display: block;
-	color: #222;
+	color: #fffacd;
 	font-family: "HelveticaNeue", "Helvetica", "Verdana";
   font-weight: bold;
 }
@@ -202,7 +207,7 @@ despite the fact that other styles in tht file are been read.*/
 .horizontal_menu ol li a:hover
 {
 	text-decoration: none;
-	color: #0088CC;
+	color: #e99378;
 }
 
 .row-top-margin {
@@ -237,11 +242,11 @@ code {
 /* ========= THEMING ================================================ */
 
 .with-clear-background {
-  background: #fff url( <%= asset_path 'noise.png' %>);
+  background: #fffef7 url( <%= asset_path 'noise.png' %>);
 }
 
 .with-colored-background {
-    background: #ffffff;
+    background: #3c3738;
 }
 
 /* ========= RESPONSIVE DESIGN ================================================ */
