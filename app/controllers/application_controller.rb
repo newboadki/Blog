@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   # Filters
   before_action :set_i18n_locale_from_params
+  before_action :set_theme
 
   # Handling exceptions
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
@@ -40,5 +41,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def set_theme
+    # This is just a default to prevent a runtime error.
+    # Subclasses must override.
+    @theme = ARTICLES_PAGE_THEME
+  end
 
 end

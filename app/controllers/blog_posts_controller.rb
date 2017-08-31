@@ -14,6 +14,9 @@ class BlogPostsController < ApplicationController
     respond_to_replacing_content_with_ajax('blog_posts', 'show', @section_title)
   end
 
+
+  protected
+
   def set_theme
     @theme = ARTICLES_PAGE_THEME
   end
