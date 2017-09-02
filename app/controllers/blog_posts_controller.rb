@@ -15,9 +15,10 @@ class BlogPostsController < ApplicationController
   end
 
 
-  protected
+  # From ApplicationController -- 
 
   def set_theme
     @theme = ARTICLES_PAGE_THEME
   end
+
 end
