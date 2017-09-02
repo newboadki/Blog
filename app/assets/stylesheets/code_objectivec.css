@@ -270,8 +270,10 @@ pre {
     white-space: pre;
     display: block;
     overflow-x: scroll;
-    border-left: .0625rem dotted #ccc;
+    border: .0625rem dotted #ccc;
     padding: 1rem;
+    margin-left: 30px;
+    margin-top: 10px;
     -webkit-overflow-scrolling: touch
 }
 
@@ -855,4 +857,3 @@ ul.contributor-list li::before {
         font-size: .875em
     }
 	}*/
-
