@@ -4,7 +4,7 @@
 	<li class="row with-margins">
 		<div class="grid-unit">
 			<h3 class="post-title"><%= @blog_post.title %></h3>
-			<p class="post-date"><%= @blog_post.created_at%> by <%= @blog_post.user.name %></h3>
+			<p class="post-date"><%= @blog_post.created_at.strftime("%d %B %Y at %I:%M %p")%> by <%= @blog_post.user.name %></h3>
 			<div class="post-image-container">
 				<%= image_tag(@blog_post.image_src, {:class => "post-image"}) %>
 			</div>

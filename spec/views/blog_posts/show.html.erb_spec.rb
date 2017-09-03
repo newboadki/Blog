@@ -6,7 +6,7 @@ describe "blog_posts/show" do
 
   	user = User.new(:name => 'McGregor')
 
-    assign(:blog_post, stub_model(BlogPost, :title => "Beginning", :body => "A new day", :user => user))
+    assign(:blog_post, stub_model(BlogPost, :title => "Beginning", :body => "A new day", :user => user, :created_at => Time.now))
 
     render
 
